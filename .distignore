@@ -1,0 +1,19 @@
+# Excluded from release/deployment ZIPs (dev-only files).
+.claude
+.git
+.github
+.wordpress-org
+dist
+.distignore
+.DS_Store
+.gitignore
+blueprint
+docs
+node_modules
+package.json
+package-lock.json
+README.md
+src
+tools
+webpack.config.js
+*.map

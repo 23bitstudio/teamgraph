@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "teamgraph/chart",
+	"title": "TeamGraph Chart",
+	"category": "widgets",
+	"icon": "networking",
+	"description": "Display your organization chart, team grid, or directory list.",
+	"keywords": [ "org chart", "team", "directory", "organization" ],
+	"textdomain": "teamgraph",
+	"attributes": {
+		"view": {
+			"type": "string",
+			"default": "tree"
+		},
+		"root": {
+			"type": "number",
+			"default": 0
+		},
+		"department": {
+			"type": "number",
+			"default": 0
+		},
+		"location": {
+			"type": "number",
+			"default": 0
+		},
+		"showTools": {
+			"type": "boolean",
+			"default": false
+		},
+		"showViewSwitch": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ]
+	},
+	"editorScript": "teamgraph-block",
+	"style": "teamgraph-chart"
+}

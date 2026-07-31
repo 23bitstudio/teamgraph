@@ -1,0 +1,14 @@
+{
+  "name": "teamgraph",
+  "version": "1.0.0",
+  "description": "TeamGraph — interactive organization chart builder for WordPress.",
+  "private": true,
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "plugin-zip": "bash tools/make-zip.sh"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.0.0"
+  }
+}
