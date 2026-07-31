@@ -47,7 +47,7 @@ class TeamGraph_Groups {
 			$id   = isset( $group['id'] ) ? sanitize_key( $group['id'] ) : '';
 			$name = isset( $group['name'] ) ? sanitize_text_field( $group['name'] ) : '';
 			if ( '' === $id || '' === $name ) {
-				return new WP_Error( 'teamgraph_invalid', __( 'Every styling group needs an id and a name.', 'teamgraph' ), array( 'status' => 400 ) );
+				return new WP_Error( 'teamgraph_invalid', __( 'Every color guide needs an id and a name.', 'teamgraph' ), array( 'status' => 400 ) );
 			}
 
 			$levels = array();
@@ -62,7 +62,7 @@ class TeamGraph_Groups {
 				);
 			}
 			if ( empty( $levels ) ) {
-				return new WP_Error( 'teamgraph_invalid', __( 'Every styling group needs at least one level.', 'teamgraph' ), array( 'status' => 400 ) );
+				return new WP_Error( 'teamgraph_invalid', __( 'Every color guide needs at least one level.', 'teamgraph' ), array( 'status' => 400 ) );
 			}
 
 			$clean[] = array(

@@ -5,6 +5,7 @@
  */
 
 import { __ } from '@wordpress/i18n';
+import { DOCS_DISPLAY_ANCHOR } from '../components';
 
 const SHORTCODE_ATTRS = [
 	{
@@ -20,12 +21,12 @@ const SHORTCODE_ATTRS = [
 	{
 		attr: 'department',
 		def: '—',
-		notes: __( 'Term ID, slug, or name. Keeps only that department; reporting lines are preserved.', 'teamgraph' ),
+		notes: __( 'Department name or slug. Keeps only that department; reporting lines are preserved.', 'teamgraph' ),
 	},
 	{
 		attr: 'location',
 		def: '—',
-		notes: __( 'Term ID, slug, or name. Same filtering, on the location taxonomy.', 'teamgraph' ),
+		notes: __( 'Location name or slug. Same filtering, on the location taxonomy.', 'teamgraph' ),
 	},
 	{
 		attr: 'showtools',
@@ -102,11 +103,12 @@ export default function Docs() {
 				</p>
 			</section>
 
-			<section className="teamgraph-settings-section">
+			{ /* Deep-linked from the Copy shortcode helper on Team Members. */ }
+			<section className="teamgraph-settings-section" id={ DOCS_DISPLAY_ANCHOR } tabIndex={ -1 }>
 				<h2>{ __( 'Displaying on your site', 'teamgraph' ) }</h2>
 				<p className="teamgraph-muted">
 					{ __(
-						'Add the TeamGraph Chart block to any page, or use the shortcode. Both render the same three views. Examples:',
+						'Add the TeamGraph Chart block to any page, or use the shortcode. Both render the same three views. The Team Members screen has an information button that copies the basic shortcode for you. Examples:',
 						'teamgraph'
 					) }
 				</p>

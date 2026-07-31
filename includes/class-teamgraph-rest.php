@@ -19,7 +19,7 @@ class TeamGraph_Rest {
 
 	public static function can_manage_members() {
 		/**
-		 * Filter the capability required for an TeamGraph action. The second
+		 * Filter the capability required for a TeamGraph action. The second
 		 * argument names the action context so extensions can grant, e.g.,
 		 * member management to a custom role without opening settings.
 		 */

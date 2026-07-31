@@ -322,7 +322,7 @@ export default function MemberForm() {
 					</label>
 
 					<label className="teamgraph-field">
-						<span>{ __( 'Styling Group', 'teamgraph' ) }</span>
+						<span>{ __( 'Color Guide', 'teamgraph' ) }</span>
 						<select value={ form.group } onChange={ setFromInput( 'group' ) }>
 							<option value="">{ __( 'Inherit from manager', 'teamgraph' ) }</option>
 							{ groups.map( ( group ) => (

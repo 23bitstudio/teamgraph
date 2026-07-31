@@ -22,7 +22,7 @@ HTML, not a canvas or a positioned-div diagram with a bolted-on fallback.
 - Focus is visible everywhere: `:focus-visible` outlines use `currentColor`
   inside cards so they survive any color-guide background.
 - All default colors pass WCAG AA (audited; most pass AAA). Custom color
-  guides are checked live in Groups & Styling — levels below 4.5:1 show a
+  guides are checked live on the Theme screen — levels below 4.5:1 show a
   warning as you edit.
 - Under 640px the tree becomes an indented list: no pinch-zooming a
   desktop diagram on a phone.

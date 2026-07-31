@@ -11,7 +11,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from '@wordpress/el
 import { applyFilters } from '@wordpress/hooks';
 import { __, _n, sprintf } from '@wordpress/i18n';
 import { api, fetchAllMembers, pages } from '../api';
-import { ConfirmDialog, EmptyState, Spinner, useDebounced } from '../components';
+import { ConfirmDialog, EmptyState, ShortcodeHelp, Spinner, useDebounced } from '../components';
 import { toast } from '../toast';
 import { PencilIcon, RestoreIcon, SearchIcon, TrashIcon, UserPlusIcon } from '../icons';
 
@@ -229,10 +229,13 @@ export default function Members() {
 		<div className="teamgraph-screen">
 			<header className="teamgraph-screen-header">
 				<h1>{ __( 'Team Members', 'teamgraph' ) }</h1>
-				<a className="teamgraph-button-primary teamgraph-button-icon" href={ pages.add }>
-					<UserPlusIcon size={ 16 } />
-					{ __( 'Add Member', 'teamgraph' ) }
-				</a>
+				<div className="teamgraph-screen-actions">
+					<ShortcodeHelp />
+					<a className="teamgraph-button-primary teamgraph-button-icon" href={ pages.add }>
+						<UserPlusIcon size={ 16 } />
+						{ __( 'Add Member', 'teamgraph' ) }
+					</a>
+				</div>
 			</header>
 
 			{ isEmpty && <EmptyState addHref={ pages.add } onSeed={ seedDemo } seeding={ seeding } /> }

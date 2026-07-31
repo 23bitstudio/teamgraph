@@ -176,6 +176,14 @@ $radius: 10px;
 		margin-bottom: 18px;
 	}
 
+	/* Trailing controls in a screen header, kept together so the header's
+	   space-between still pushes the whole group opposite the title. */
+	.teamgraph-screen-actions {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
 	/* ---------------- Toasts ---------------- */
 
 	.teamgraph-toast-host {
@@ -1136,6 +1144,178 @@ $radius: 10px;
 	.teamgraph-icon-danger:hover {
 		background: #fdecea;
 		color: $danger;
+	}
+
+	/* The "i" in the screen header that reveals the shortcode explainer. */
+	.teamgraph-shortcode-help {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.teamgraph-info-button svg {
+		opacity: 0.85;
+	}
+
+	/* Fixed, not absolute, so no ancestor's overflow can clip it. Coordinates
+	   come from the button's rect at open time; the panel closes on scroll. */
+	.teamgraph-shortcode-pop {
+		position: fixed;
+		z-index: 100;
+		width: 380px;
+		background: #fff;
+		border: 1px solid $line;
+		border-radius: $radius;
+		box-shadow: 0 12px 32px rgba(20, 32, 55, 0.18);
+		overflow: hidden;
+		text-align: left;
+		white-space: normal;
+		font-size: 12px;
+		line-height: 1.55;
+		font-weight: 400;
+		cursor: default;
+
+		strong {
+			display: block;
+			color: $ink;
+			font-size: 13px;
+			font-weight: 700;
+		}
+
+		p {
+			margin: 2px 0 0;
+			color: $muted;
+		}
+	}
+
+	/* Badge + title block at the top. */
+	.teamgraph-shortcode-pop-head {
+		display: flex;
+		align-items: flex-start;
+		gap: 12px;
+		padding: 16px 16px 12px;
+	}
+
+	.teamgraph-shortcode-badge {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		flex: none;
+		border-radius: 50%;
+		background: #e8effc;
+		color: $accent;
+	}
+
+	/* The shortcode itself, with its copy button tucked inside the field. */
+	.teamgraph-shortcode-field {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin: 0 16px 14px;
+		padding: 8px 8px 8px 12px;
+		background: #f6f8fc;
+		border: 1px solid $line;
+		border-radius: 8px;
+
+		code {
+			flex: 1;
+			min-width: 0;
+			color: $accent;
+			font-size: 13px;
+			font-weight: 600;
+			word-break: break-all;
+		}
+	}
+
+	.teamgraph-shortcode-copy {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		flex: none;
+		padding: 0;
+		background: #fff;
+		border: 1px solid $line;
+		border-radius: 6px;
+		color: $accent;
+		cursor: pointer;
+
+		&:hover {
+			background: #e8effc;
+		}
+
+		&:focus-visible {
+			outline: 2px solid $accent;
+			outline-offset: 1px;
+		}
+	}
+
+	/* Explanatory row under a hairline divider. */
+	.teamgraph-shortcode-pop-row {
+		display: flex;
+		align-items: flex-start;
+		gap: 12px;
+		padding: 14px 16px;
+		border-top: 1px solid $line;
+
+		code {
+			padding: 1px 5px;
+			background: #e8effc;
+			border-radius: 4px;
+			color: $ink;
+			font-size: 11px;
+			white-space: nowrap;
+		}
+	}
+
+	.teamgraph-shortcode-rowicon {
+		display: inline-flex;
+		flex: none;
+		width: 36px;
+		justify-content: center;
+		color: $accent;
+	}
+
+	/* Tinted footer that is itself the link to the docs section. */
+	.teamgraph-shortcode-more {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding: 14px 16px;
+		background: #f2f6fd;
+		border-top: 1px solid $line;
+		text-decoration: none;
+		color: $muted;
+
+		strong {
+			color: $accent;
+		}
+
+		> span:nth-child(2) span {
+			display: block;
+			color: $muted;
+		}
+
+		> svg {
+			margin-left: auto;
+			flex: none;
+			color: $accent;
+		}
+
+		&:hover {
+			background: #e8effc;
+
+			strong {
+				text-decoration: underline;
+			}
+		}
+
+		&:focus-visible {
+			outline: 2px solid $accent;
+			outline-offset: -2px;
+		}
 	}
 
 	.teamgraph-guide-dot {

@@ -29,7 +29,7 @@ TeamGraph turns your team into reusable people records and displays them three w
 
 **In wp-admin** (fast React screens under "TeamGraph"):
 
-* Team Members: instant search, sortable columns, pagination, bulk actions, and a Trash tab to restore deleted members or remove them permanently
+* Team Members: instant search, sortable columns, pagination, bulk actions, a Trash tab to restore deleted members or remove them permanently, and a one-click copy of the shortcode
 * Add/Edit Member with a biography, department, location, photo, live card preview, and a searchable manager picker that never offers a choice that would create a reporting cycle
 * Chart Builder: drag onto a member to change their manager, drag above/below to reorder, live tree search, slide-in editing drawer
 * Organization: manage your departments and locations in one place
@@ -51,7 +51,7 @@ Members are a custom post type ("reports to" is the post hierarchy; the biograph
 
 = How do I show the chart on a page? =
 
-Insert the **TeamGraph Chart** block, or add the `[teamgraph]` shortcode. Both accept a view (`tree`, `grid`, or `list`), an optional starting member, and department/location filters: `[teamgraph view="grid" department="Marketing"]` or `[teamgraph root="123"]`. The shortcode accepts a department/location by name, slug, or id.
+Insert the **TeamGraph Chart** block, or add the `[teamgraph]` shortcode. Both accept a view (`tree`, `grid`, or `list`), an optional starting member, and department/location filters: `[teamgraph view="grid" department="Marketing"]` or `[teamgraph root="123"]`. The shortcode accepts a department/location by name or slug.
 
 = Is the chart accessible? =
 
@@ -91,7 +91,7 @@ Only if you ask it to. By default all data is kept; enable "Delete all data on u
 == Changelog ==
 
 = 1.0.0 =
-* Initial release: members with bios and photos, departments, locations, styling groups, drag-and-drop Chart Builder, three semantic front-end views (chart, grid, list) with department/location filtering, Gutenberg block and shortcode, sample data, CSV import/export, uninstall controls.
+* Initial release: members with bios and photos, departments, locations, color guides, drag-and-drop Chart Builder, three semantic front-end views (chart, grid, list) with department/location filtering, Gutenberg block and shortcode, sample data, CSV import/export, uninstall controls.
 
 == Upgrade Notice ==
 

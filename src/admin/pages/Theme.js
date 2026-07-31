@@ -149,7 +149,7 @@ export default function Theme() {
 			const saved = await api.put( '/groups', { groups } );
 			setGroups( saved );
 			setDirty( false );
-			toast.success( __( 'Styling groups saved.', 'teamgraph' ) );
+			toast.success( __( 'Color guides saved.', 'teamgraph' ) );
 		} catch ( err ) {
 			toast.error( err.message );
 		} finally {
@@ -361,9 +361,9 @@ export default function Theme() {
 
 			{ deletingGroup && (
 				<ConfirmDialog
-					title={ __( 'Delete styling group?', 'teamgraph' ) }
+					title={ __( 'Delete color guide?', 'teamgraph' ) }
 					message={ sprintf(
-						/* translators: %s: styling group name. */
+						/* translators: %s: color guide name. */
 						__(
 							'Members assigned to “%s” will fall back to inherited styling. This is applied when you save.',
 							'teamgraph'

@@ -144,9 +144,10 @@ class TeamGraph_Shortcode {
 	 * view:       tree | grid | list (extensions can render other names via
 	 *             the teamgraph_render_view filter).
 	 * root:       member id to chart a single branch; 0 = whole organization.
-	 * department: term id, slug, or name — keeps only members whose effective
+	 * department: department name or slug — keeps only members whose effective
 	 *             department matches; their reporting lines are preserved.
-	 * location:   term id, slug, or name — same, on the location taxonomy.
+	 *             (A numeric term id also resolves; see resolve_term().)
+	 * location:   location name or slug — same, on the location taxonomy.
 	 * showtools:  true to add the front-end toolbar (zoom, expand all,
 	 *             fullscreen, and — unless `view` is set explicitly — a
 	 *             Tree/Grid/List switcher). WordPress lowercases attribute
@@ -284,9 +285,11 @@ class TeamGraph_Shortcode {
 	 * ------------------------------------------------------------------- */
 
 	/**
-	 * Resolve a department/location attribute to a term id. Accepts a term
-	 * id, slug, or name; 0 when empty or unmatched (unmatched values render
-	 * an empty chart rather than silently showing everyone).
+	 * Resolve a department/location attribute to a term id. Users are told to
+	 * pass a name or slug; a numeric term id is still accepted because the
+	 * block stores terms numerically and the toolbar round-trips those ids to
+	 * the render endpoint. Returns 0 when empty, -1 when unmatched (unmatched
+	 * values render an empty chart rather than silently showing everyone).
 	 */
 	private static function resolve_term( $value, $taxonomy ) {
 		$value = trim( (string) $value );

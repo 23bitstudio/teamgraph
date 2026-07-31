@@ -77,6 +77,66 @@ export function UserPlusIcon( props ) {
 	);
 }
 
+/** Clipboard: copy the shortcode for pasting into a page or post. */
+export function ClipboardIcon( props ) {
+	return (
+		<Icon { ...props }>
+			<path d="M7.5 4.5h-2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-10a1 1 0 0 0-1-1h-2" />
+			<rect x="7.5" y="3" width="5" height="3" rx="1" />
+		</Icon>
+	);
+}
+
+/** Check mark: transient confirmation after a successful copy. */
+export function CheckIcon( props ) {
+	return (
+		<Icon strokeWidth={ 2 } { ...props }>
+			<path d="M4.5 10.5l3.5 3.5 7.5-8" />
+		</Icon>
+	);
+}
+
+/**
+ * Info "i" — the dot is a zero-length path, drawn by the shared round line
+ * cap so it stays a circle at any size.
+ */
+export function InfoIcon( props ) {
+	return (
+		<Icon { ...props }>
+			<circle cx="10" cy="10" r="7" />
+			<path d="M10 9.2v4.3" />
+			<path d="M10 6.5v.01" />
+		</Icon>
+	);
+}
+
+/** Angle brackets with a slash: the shortcode explainer's badge. */
+export function CodeIcon( props ) {
+	return (
+		<Icon { ...props }>
+			<path d="M7.2 6.4 3.6 10l3.6 3.6M12.8 6.4 16.4 10l-3.6 3.6M11.3 5.2 8.7 14.8" />
+		</Icon>
+	);
+}
+
+/** Open book: the "Learn more" row. */
+export function BookIcon( props ) {
+	return (
+		<Icon { ...props }>
+			<path d="M10 6.4C8.6 5.3 6.8 4.9 4.5 4.9v9.2c2.3 0 4.1.4 5.5 1.5 1.4-1.1 3.2-1.5 5.5-1.5V4.9c-2.3 0-4.1.4-5.5 1.5Z" />
+			<path d="M10 6.4v9.2" />
+		</Icon>
+	);
+}
+
+export function ChevronRightIcon( props ) {
+	return (
+		<Icon strokeWidth={ 1.8 } { ...props }>
+			<path d="M8 5.5 12.5 10 8 14.5" />
+		</Icon>
+	);
+}
+
 /** Counter-clockwise arrow: restore from trash. */
 export function RestoreIcon( props ) {
 	return (

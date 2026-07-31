@@ -38,7 +38,7 @@ Member cards carry a photo, name, job title, email, phone, and profile link. Any
 
 Fast React screens under **TeamGraph**:
 
-- **Team Members** — instant search, sortable columns, pagination, bulk delete
+- **Team Members** — instant search, sortable columns, pagination, bulk actions, a Trash tab with restore, and one-click shortcode copy
 - **Add/Edit Member** — biography, department, location, photo, live card preview, and a manager picker that never offers a choice which would create a reporting cycle
 - **Chart Builder** — drag onto a member to change their manager, drag above/below to reorder; live tree search and a slide-in editing drawer
 - **Organization** — manage departments and locations in one place
@@ -60,8 +60,8 @@ Insert the **TeamGraph Chart** block, or use the shortcode:
 | --- | --- | --- |
 | `view` | `tree` | `tree`, `grid`, or `list` |
 | `root` | `0` | Member ID to chart from; `0` charts the whole org |
-| `department` | — | Term ID, slug, or name |
-| `location` | — | Term ID, slug, or name |
+| `department` | — | Department name or slug |
+| `location` | — | Location name or slug |
 | `showtools` | — | Show the front-end tools bar |
 | `viewswitch` | — | Offer a view switcher (suppressed when `view` is set explicitly) |
 

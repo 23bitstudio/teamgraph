@@ -575,7 +575,7 @@ export default function Builder() {
 								</select>
 							</label>
 							<label className="teamgraph-field">
-								<span>{ __( 'Styling Group', 'teamgraph' ) }</span>
+								<span>{ __( 'Color Guide', 'teamgraph' ) }</span>
 								<select value={ drawer.form.group } onChange={ drawerInput( 'group' ) }>
 									<option value="">{ __( 'Inherit from manager', 'teamgraph' ) }</option>
 									{ data.groups.map( ( group ) => (

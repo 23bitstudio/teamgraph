@@ -174,8 +174,23 @@ function TabPanel( { id, active, children } ) {
 	);
 }
 
+/**
+ * Deep links arrive from elsewhere in the admin — the Copy shortcode helper
+ * on Team Members points at ?tab=docs#teamgraph-docs-display — so the opening
+ * tab comes from the query string whenever it names a real tab.
+ */
+function initialTab() {
+	try {
+		const requested = new URLSearchParams( window.location.search ).get( 'tab' );
+		return TABS.some( ( entry ) => entry.id === requested ) ? requested : 'general';
+	} catch ( err ) {
+		return 'general';
+	}
+}
+
 export default function Settings() {
-	const [ tab, setTab ] = useState( 'general' );
+	const [ tab, setTab ] = useState( initialTab );
+	const anchored = useRef( false );
 	const [ settings, setSettings ] = useState( null );
 	const [ demoExists, setDemoExists ] = useState( false );
 	const [ loading, setLoading ] = useState( true );
@@ -187,6 +202,31 @@ export default function Settings() {
 	const [ importing, setImporting ] = useState( false );
 	const [ importFile, setImportFile ] = useState( null );
 	const [ importResult, setImportResult ] = useState( null );
+
+	// Honour the #anchor on a deep link once its tab panel is on screen. The
+	// screen renders only a spinner until `loading` clears, so the target does
+	// not exist on the first pass — hence the dependency on `loading` as well
+	// as `tab`. Runs once: switching tabs later shouldn't yank the page back.
+	useEffect( () => {
+		if ( anchored.current || loading ) {
+			return;
+		}
+		const anchor = window.location.hash.replace( '#', '' );
+		const target = anchor ? document.getElementById( anchor ) : null;
+		if ( ! target || target.closest( '[hidden]' ) ) {
+			return;
+		}
+		anchored.current = true;
+		// Smooth unless the visitor asked for reduced motion, per the
+		// accessibility contract in docs/ACCESSIBILITY.md.
+		const reduceMotion = window.matchMedia?.( '(prefers-reduced-motion: reduce)' )?.matches;
+		target.scrollIntoView( {
+			block: 'start',
+			behavior: reduceMotion ? 'auto' : 'smooth',
+		} );
+		// preventScroll so focusing the section doesn't jump past the animation.
+		target.focus( { preventScroll: true } );
+	}, [ tab, loading ] );
 
 	useEffect( () => {
 		( async () => {
@@ -326,7 +366,7 @@ export default function Settings() {
 								) }
 								<small className="teamgraph-muted">
 									{ __(
-										'Members, departments, locations, and styling groups are removed permanently when the plugin is deleted from the Plugins screen. Leave off to keep data through a reinstall.',
+										'Members, departments, locations, and color guides are removed permanently when the plugin is deleted from the Plugins screen. Leave off to keep data through a reinstall.',
 										'teamgraph'
 									) }
 								</small>
