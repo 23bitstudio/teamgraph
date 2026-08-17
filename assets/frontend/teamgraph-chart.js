@@ -650,6 +650,9 @@
 			'root=' + encodeURIComponent( root.dataset.root || '0' ),
 			'department=' + encodeURIComponent( root.dataset.department || '' ),
 			'location=' + encodeURIComponent( root.dataset.location || '' ),
+			// Authorizes the call: the server stamped this onto the chart when
+			// it rendered the page, and re-derives it to check the request.
+			'sig=' + encodeURIComponent( root.dataset.sig || '' ),
 		].join( '&' );
 
 		var status = state.bar && state.bar.querySelector( '.teamgraph-tool-status' );

@@ -704,16 +704,25 @@ a.teamgraph-name:focus-visible,
 /* Fullscreen — native where supported, fixed overlay as fallback      */
 /* ------------------------------------------------------------------ */
 
+/* Doubled class on the fallback is deliberate: block themes cap content width
+   with `.is-layout-constrained > :where(…)`, which is also (0,1,0), and their
+   global styles are printed inline after this file — so a single-class
+   selector loses the tie and the overlay stays the width of the article
+   column with the page showing through beside it. `.teamgraph:fullscreen` is
+   already (0,2,0) and wins on its own. */
 .teamgraph:fullscreen,
-.teamgraph-fauxscreen {
+.teamgraph.teamgraph-fauxscreen {
 	display: flex;
 	flex-direction: column;
 	background: #ffffff;
 	padding: 20px;
 	overflow: hidden;
+	max-width: none;
+	width: auto;
+	margin: 0;
 }
 
-.teamgraph-fauxscreen {
+.teamgraph.teamgraph-fauxscreen {
 	position: fixed;
 	inset: 0;
 	z-index: 99999;

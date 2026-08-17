@@ -77,6 +77,20 @@ Yes. The chart renders inside its own reset container, so theme typography and l
 
 Only if you ask it to. By default all data is kept; enable "Delete all data on uninstall" under TeamGraph → Settings if you want removal to be complete.
 
+== Development ==
+
+TeamGraph ships with its complete, unminified source. The two admin bundles in `build/` (`admin.js` and `block.js`) are compiled from `src/` with [@wordpress/scripts](https://www.npmjs.com/package/@wordpress/scripts), which minifies its production output; the corresponding sources and the build configuration are included in the plugin so the compiled files can be reproduced and reviewed.
+
+* `src/admin/` — the wp-admin React screens. All screens share one bundle and mount by the root element's `data-page` attribute.
+* `src/block/` — the block editor bundle for the TeamGraph Chart block.
+* `webpack.config.js` and `package.json` — the build configuration.
+
+To rebuild the bundles from source, run this in the plugin directory:
+
+`npm install && npm run build`
+
+Everything else runs unbuilt: the PHP in `includes/` is plain source, and the front end in `assets/frontend/` is hand-written vanilla JavaScript and CSS with no build step and no dependencies.
+
 == Screenshots ==
 
 1. Org chart view with department pills and color guides
@@ -86,7 +100,6 @@ Only if you ask it to. By default all data is kept; enable "Delete all data on u
 5. Team Members list with search and bulk actions
 6. Add/Edit Member with live card preview
 7. Theme color-guide editor with contrast warnings
-8. The same chart on a phone — an accessible indented list
 
 == Changelog ==
 
