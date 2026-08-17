@@ -81,19 +81,29 @@ class TeamGraph_Shortcode {
 	 * the visitor, so it is safe to serve from a page cache. Rotating the
 	 * site's salts invalidates outstanding signatures; cached pages then
 	 * lose view switching until they are regenerated.
+	 *
+	 * The payload is JSON rather than a delimiter-joined string: department
+	 * and location may be term *names* (see resolve_term()), so any delimiter
+	 * we picked could legally appear inside a value and let two different
+	 * attribute sets sign identically.
 	 */
 	private static function sign( $atts ) {
-		return wp_hash(
-			implode(
-				'|',
-				array(
-					'teamgraph_render',
-					(string) (int) $atts['root'],
-					(string) $atts['department'],
-					(string) $atts['location'],
-				)
+		$payload = wp_json_encode(
+			array(
+				'context'    => 'teamgraph_render',
+				'root'       => (int) $atts['root'],
+				'department' => (string) $atts['department'],
+				'location'   => (string) $atts['location'],
 			)
 		);
+
+		// Attributes that will not encode (invalid UTF-8) must not all collapse
+		// onto one signature; give them one that nothing can match.
+		if ( false === $payload ) {
+			return wp_hash( 'teamgraph_render_unencodable:' . wp_generate_password( 32, false ) );
+		}
+
+		return wp_hash( $payload );
 	}
 
 	public static function rest_render( $request ) {
