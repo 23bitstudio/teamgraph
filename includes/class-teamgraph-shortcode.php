@@ -28,8 +28,14 @@ class TeamGraph_Shortcode {
 	 * Public, read-only endpoint backing the toolbar's view switcher: it
 	 * re-renders the same chart in another view. Deliberately separate from
 	 * TeamGraph_Rest, whose routes are all capability-gated — this one is
-	 * unauthenticated and must stay read-only. It exposes nothing the
-	 * shortcode doesn't already print on the page.
+	 * unauthenticated and must stay read-only.
+	 *
+	 * It stays unauthenticated because the charts it re-renders are public
+	 * page content, but it is *not* open-ended: the caller must present the
+	 * `sig` that render() stamped onto the chart it is switching. Without
+	 * that, the endpoint would let anyone dump every member's email and
+	 * phone straight from the REST API — including on a site that has never
+	 * published a chart at all. See sign().
 	 */
 	public static function register_rest_route() {
 		register_rest_route(
@@ -56,20 +62,67 @@ class TeamGraph_Shortcode {
 						'type'    => 'string',
 						'default' => '',
 					),
+					'sig'        => array(
+						'type'     => 'string',
+						'required' => true,
+					),
 				),
 			)
 		);
 	}
 
-	public static function rest_render( $request ) {
-		$result = self::build_view(
+	/**
+	 * Signature over the member-selection arguments — everything except
+	 * `view`, which is the one thing the switcher is allowed to vary. Keyed
+	 * on the site's own salts via wp_hash(), so a signature can only come
+	 * from a chart this site rendered.
+	 *
+	 * The value depends solely on the shortcode/block attributes, never on
+	 * the visitor, so it is safe to serve from a page cache. Rotating the
+	 * site's salts invalidates outstanding signatures; cached pages then
+	 * lose view switching until they are regenerated.
+	 *
+	 * The payload is JSON rather than a delimiter-joined string: department
+	 * and location may be term *names* (see resolve_term()), so any delimiter
+	 * we picked could legally appear inside a value and let two different
+	 * attribute sets sign identically.
+	 */
+	private static function sign( $atts ) {
+		$payload = wp_json_encode(
 			array(
-				'view'       => (string) $request['view'],
-				'root'       => (string) $request['root'],
-				'department' => (string) $request['department'],
-				'location'   => (string) $request['location'],
+				'context'    => 'teamgraph_render',
+				'root'       => (int) $atts['root'],
+				'department' => (string) $atts['department'],
+				'location'   => (string) $atts['location'],
 			)
 		);
+
+		// Attributes that will not encode (invalid UTF-8) must not all collapse
+		// onto one signature; give them one that nothing can match.
+		if ( false === $payload ) {
+			return wp_hash( 'teamgraph_render_unencodable:' . wp_generate_password( 32, false ) );
+		}
+
+		return wp_hash( $payload );
+	}
+
+	public static function rest_render( $request ) {
+		$atts = array(
+			'view'       => (string) $request['view'],
+			'root'       => (string) $request['root'],
+			'department' => (string) $request['department'],
+			'location'   => (string) $request['location'],
+		);
+
+		if ( ! hash_equals( self::sign( $atts ), (string) $request['sig'] ) ) {
+			return new WP_Error(
+				'teamgraph_invalid_signature',
+				__( 'This chart could not be verified.', 'teamgraph' ),
+				array( 'status' => 403 )
+			);
+		}
+
+		$result = self::build_view( $atts );
 
 		return rest_ensure_response(
 			array(
@@ -187,10 +240,12 @@ class TeamGraph_Shortcode {
 		);
 		if ( $show_tools ) {
 			$data['data-tools'] = '1';
-			// Round-tripped to the REST endpoint when switching views.
+			// Round-tripped to the REST endpoint when switching views. The
+			// signature is what authorizes that call — see sign().
 			$data['data-root']       = (string) (int) $atts['root'];
 			$data['data-department'] = (string) $atts['department'];
 			$data['data-location']   = (string) $atts['location'];
+			$data['data-sig']        = self::sign( $atts );
 			$switch = isset( $supplied['viewswitch'] )
 				? self::is_truthy( $atts['viewswitch'] )
 				: ! $view_lock;

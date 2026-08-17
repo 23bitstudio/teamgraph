@@ -1,4 +1,10 @@
 # Excluded from release/deployment ZIPs (dev-only files).
+#
+# src/, package.json and webpack.config.js are deliberately NOT listed: the
+# admin and block bundles in build/ are minified, so the WordPress.org
+# guidelines require the unminified sources and the build config to ship with
+# them (guideline 4, "code must be mostly human readable"). readme.txt's
+# Development section documents the build.
 .claude
 .git
 .github
@@ -10,10 +16,7 @@ dist
 blueprint
 docs
 node_modules
-package.json
 package-lock.json
 README.md
-src
 tools
-webpack.config.js
 *.map

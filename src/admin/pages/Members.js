@@ -9,7 +9,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from '@wordpress/element';
 import { applyFilters } from '@wordpress/hooks';
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, _x, sprintf } from '@wordpress/i18n';
 import { api, fetchAllMembers, pages } from '../api';
 import { ConfirmDialog, EmptyState, ShortcodeHelp, Spinner, useDebounced } from '../components';
 import { toast } from '../toast';
@@ -473,7 +473,11 @@ export default function Members() {
 												className="teamgraph-icon-button teamgraph-icon-danger"
 												aria-label={ sprintf(
 													/* translators: %s: member name. */
-													__( 'Delete %s', 'teamgraph' ),
+													_x(
+														'Delete %s',
+														'team member',
+														'teamgraph'
+													),
 													member.name
 												) }
 												onClick={ () => setDeleting( [ member ] ) }

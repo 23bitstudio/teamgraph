@@ -5,7 +5,7 @@
  */
 
 import { useEffect, useState } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, _x, sprintf } from '@wordpress/i18n';
 import { api } from '../api';
 import { Spinner } from '../components';
 import { toast } from '../toast';
@@ -91,7 +91,11 @@ function TermManager( { title, base, placeholder, noun, terms, setTerms } ) {
 									className="teamgraph-icon-button teamgraph-icon-danger"
 									aria-label={ sprintf(
 										/* translators: %s: department or location name. */
-										__( 'Delete %s', 'teamgraph' ),
+										_x(
+											'Delete %s',
+											'department or location',
+											'teamgraph'
+										),
 										term.name
 									) }
 									onClick={ remove( term ) }

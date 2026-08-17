@@ -2,93 +2,127 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: TeamGraph 1.0.0\n"
+"Project-Id-Version: TeamGraph – Org Chart & Team Directory 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/teamgraph\n"
-"POT-Creation-Date: 2026-07-31 06:08:28+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-08-17T05:30:09+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: teamgraph\n"
 
-#: block/block.json
-msgid "TeamGraph Chart"
+#. Plugin Name of the plugin
+#: teamgraph.php
+msgid "TeamGraph – Org Chart & Team Directory"
 msgstr ""
 
-#: block/block.json
-msgid "Display your organization chart, team grid, or directory list."
+#. Plugin URI of the plugin
+#: teamgraph.php
+msgid "https://getteamgraph.com"
 msgstr ""
 
-#: block/block.json
-msgid "org chart"
+#. Description of the plugin
+#: teamgraph.php
+msgid "Accessible org charts and team directories: chart, grid, and list views from one block or shortcode, built as semantic HTML. Drag-and-drop React admin; dependency-free front end."
 msgstr ""
 
-#: block/block.json
-msgid "team"
+#. Author of the plugin
+#: teamgraph.php
+msgid "23Bit Studio"
 msgstr ""
 
-#: block/block.json
-msgid "directory"
+#. Author URI of the plugin
+#: teamgraph.php
+msgid "https://23bitstudio.com"
 msgstr ""
 
-#: block/block.json
-msgid "organization"
-msgstr ""
-
-#: includes/class-teamgraph-admin.php:35 includes/class-teamgraph-data.php:93 src/admin/pages/Members.js:231
+#: includes/class-teamgraph-admin.php:35
+#: includes/class-teamgraph-data.php:93
+#: build/admin.js:13
+#: src/admin/pages/Members.js:231
 msgid "Team Members"
 msgstr ""
 
-#: includes/class-teamgraph-admin.php:40 src/admin/components.js:605 src/admin/components.js:609 src/admin/pages/Builder.js:412 src/admin/pages/Builder.js:471 src/admin/pages/MemberForm.js:224 src/admin/pages/MemberForm.js:358 src/admin/pages/Members.js:236
+#: includes/class-teamgraph-admin.php:40
+#: build/admin.js:3
+#: build/admin.js:13
+#: build/admin.js:29
+#: build/admin.js:33
+#: build/admin.js:34
+#: src/admin/components.js:605
+#: src/admin/components.js:609
+#: src/admin/pages/Builder.js:412
+#: src/admin/pages/Builder.js:471
+#: src/admin/pages/MemberForm.js:224
+#: src/admin/pages/MemberForm.js:358
+#: src/admin/pages/Members.js:236
 msgid "Add Member"
 msgstr ""
 
-#: includes/class-teamgraph-admin.php:46 src/admin/pages/Builder.js:405
+#: includes/class-teamgraph-admin.php:46
+#: build/admin.js:33
+#: src/admin/pages/Builder.js:405
 msgid "Chart Builder"
 msgstr ""
 
-#: includes/class-teamgraph-admin.php:51 src/admin/pages/Organization.js:154
+#: includes/class-teamgraph-admin.php:51
+#: build/admin.js:36
+#: src/admin/pages/Organization.js:158
 msgid "Organization"
 msgstr ""
 
-#: includes/class-teamgraph-admin.php:56 src/admin/pages/Theme.js:171
+#: includes/class-teamgraph-admin.php:56
+#: build/admin.js:36
+#: src/admin/pages/Theme.js:171
 msgid "Theme"
 msgstr ""
 
-#: includes/class-teamgraph-admin.php:61 src/admin/pages/Settings.js:346
+#: includes/class-teamgraph-admin.php:61
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:346
 msgid "Settings"
 msgstr ""
 
-#: includes/class-teamgraph-admin.php:75 includes/class-teamgraph-admin.php:76
+#: includes/class-teamgraph-admin.php:75
+#: includes/class-teamgraph-admin.php:76
 msgid "TeamGraph"
 msgstr ""
 
 #. translators: %d: CSV line number.
 #: includes/class-teamgraph-csv.php:138
+#, php-format
 msgid "Line %d: skipped — the name column is empty."
 msgstr ""
 
 #. translators: 1: CSV line number, 2: error message.
 #: includes/class-teamgraph-csv.php:161
+#, php-format
 msgid "Line %1$d: skipped — %2$s"
 msgstr ""
 
 #. translators: 1: CSV line number, 2: term name.
 #: includes/class-teamgraph-csv.php:192
+#, php-format
 msgid "Line %1$d: could not create the term \"%2$s\"."
 msgstr ""
 
 #. translators: 1: CSV line number, 2: manager name.
 #: includes/class-teamgraph-csv.php:215
+#, php-format
 msgid "Line %1$d: manager \"%2$s\" was not found — the member was left without a manager."
 msgstr ""
 
 #. translators: 1: CSV line number, 2: manager name.
 #: includes/class-teamgraph-csv.php:218
+#, php-format
 msgid "Line %1$d: manager \"%2$s\" would create a reporting cycle — the member was left without a manager."
 msgstr ""
 
-#: includes/class-teamgraph-csv.php:249 includes/class-teamgraph-csv.php:259
+#: includes/class-teamgraph-csv.php:249
+#: includes/class-teamgraph-csv.php:259
 msgid "The CSV file is empty."
 msgstr ""
 
@@ -98,27 +132,50 @@ msgstr ""
 
 #. translators: %d: maximum row count.
 #: includes/class-teamgraph-csv.php:282
+#, php-format
 msgid "The CSV file has too many rows (the limit is %d)."
-msgstr ""
-
-#: includes/class-teamgraph-data.php:109 src/admin/pages/Organization.js:166
-msgid "Departments"
-msgstr ""
-
-#: includes/class-teamgraph-data.php:110 src/admin/pages/Builder.js:546 src/admin/pages/MemberForm.js:295 src/admin/pages/Organization.js:169 src/admin/pages/Theme.js:355 src/block/index.js:123
-msgid "Department"
-msgstr ""
-
-#: includes/class-teamgraph-data.php:124 src/admin/pages/Organization.js:175
-msgid "Locations"
-msgstr ""
-
-#: includes/class-teamgraph-data.php:125 src/admin/pages/Builder.js:562 src/admin/pages/MemberForm.js:310 src/admin/pages/Organization.js:178 src/block/index.js:129
-msgid "Location"
 msgstr ""
 
 #: includes/class-teamgraph-data.php:94
 msgid "Team Member"
+msgstr ""
+
+#: includes/class-teamgraph-data.php:109
+#: build/admin.js:36
+#: src/admin/pages/Organization.js:170
+msgid "Departments"
+msgstr ""
+
+#: includes/class-teamgraph-data.php:110
+#: build/admin.js:29
+#: build/admin.js:34
+#: build/admin.js:36
+#: build/admin.js:42
+#: build/block.js:1
+#: src/admin/pages/Builder.js:546
+#: src/admin/pages/MemberForm.js:295
+#: src/admin/pages/Organization.js:173
+#: src/admin/pages/Theme.js:355
+#: src/block/index.js:123
+msgid "Department"
+msgstr ""
+
+#: includes/class-teamgraph-data.php:124
+#: build/admin.js:36
+#: src/admin/pages/Organization.js:179
+msgid "Locations"
+msgstr ""
+
+#: includes/class-teamgraph-data.php:125
+#: build/admin.js:29
+#: build/admin.js:34
+#: build/admin.js:36
+#: build/block.js:1
+#: src/admin/pages/Builder.js:562
+#: src/admin/pages/MemberForm.js:310
+#: src/admin/pages/Organization.js:182
+#: src/block/index.js:129
+msgid "Location"
 msgstr ""
 
 #: includes/class-teamgraph-demo.php:40
@@ -141,15 +198,19 @@ msgstr ""
 msgid "Every color guide needs at least one level."
 msgstr ""
 
-#: includes/class-teamgraph-rest.php:330 includes/class-teamgraph-rest.php:667 includes/class-teamgraph-rest.php:686
+#: includes/class-teamgraph-rest.php:330
+#: includes/class-teamgraph-rest.php:667
+#: includes/class-teamgraph-rest.php:686
 msgid "A name is required."
 msgstr ""
 
-#: includes/class-teamgraph-rest.php:337 includes/class-teamgraph-rest.php:618
+#: includes/class-teamgraph-rest.php:337
+#: includes/class-teamgraph-rest.php:618
 msgid "The selected manager does not exist."
 msgstr ""
 
-#: includes/class-teamgraph-rest.php:340 includes/class-teamgraph-rest.php:628
+#: includes/class-teamgraph-rest.php:340
+#: includes/class-teamgraph-rest.php:628
 msgid "A member cannot report to themselves or to one of their own reports."
 msgstr ""
 
@@ -161,7 +222,9 @@ msgstr ""
 msgid "The selected location does not exist."
 msgstr ""
 
-#: includes/class-teamgraph-rest.php:441 includes/class-teamgraph-rest.php:486 includes/class-teamgraph-rest.php:547
+#: includes/class-teamgraph-rest.php:441
+#: includes/class-teamgraph-rest.php:486
+#: includes/class-teamgraph-rest.php:547
 msgid "ids must be a non-empty array."
 msgstr ""
 
@@ -169,7 +232,8 @@ msgstr ""
 msgid "ids must be an array."
 msgstr ""
 
-#: includes/class-teamgraph-rest.php:681 includes/class-teamgraph-rest.php:700
+#: includes/class-teamgraph-rest.php:681
+#: includes/class-teamgraph-rest.php:700
 msgid "Not found."
 msgstr ""
 
@@ -181,1097 +245,1474 @@ msgstr ""
 msgid "Settings payload must be an object."
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:103
+#: includes/class-teamgraph-shortcode.php:110
+msgid "This chart could not be verified."
+msgstr ""
+
+#: includes/class-teamgraph-shortcode.php:146
 msgid "Filter team members"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:104
+#: includes/class-teamgraph-shortcode.php:147
 msgid "Filter by name, title…"
 msgstr ""
 
 #. translators: 1: members shown, 2: total members.
-#: includes/class-teamgraph-shortcode.php:106
+#: includes/class-teamgraph-shortcode.php:149
+#, php-format
 msgid "%1$s of %2$s members shown"
 msgstr ""
 
 #. translators: 1: member name, 2: number of direct reports.
-#: includes/class-teamgraph-shortcode.php:108
+#: includes/class-teamgraph-shortcode.php:151
+#, php-format
 msgid "Direct reports of %1$s (%2$s)"
 msgstr ""
 
 #. translators: %s: number of direct reports.
-#: includes/class-teamgraph-shortcode.php:110
+#: includes/class-teamgraph-shortcode.php:153
+#, php-format
 msgid "Direct reports (%s)"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:113
+#: includes/class-teamgraph-shortcode.php:156
 msgid "Chart tools"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:114
+#: includes/class-teamgraph-shortcode.php:157
 msgid "Zoom in"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:115
+#: includes/class-teamgraph-shortcode.php:158
 msgid "Zoom out"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:116
+#: includes/class-teamgraph-shortcode.php:159
 msgid "Reset zoom"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:117
+#: includes/class-teamgraph-shortcode.php:160
 msgid "Fit the whole chart"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:118
+#: includes/class-teamgraph-shortcode.php:161
 msgid "Expand all"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:119
+#: includes/class-teamgraph-shortcode.php:162
 msgid "Collapse all"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:120
+#: includes/class-teamgraph-shortcode.php:163
 msgid "Fullscreen"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:121
+#: includes/class-teamgraph-shortcode.php:164
 msgid "Exit fullscreen"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:122
+#: includes/class-teamgraph-shortcode.php:165
 msgid "Chart view"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:123
+#: includes/class-teamgraph-shortcode.php:166
 msgid "Tree"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:124
+#: includes/class-teamgraph-shortcode.php:167
 msgid "Grid"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:125
+#: includes/class-teamgraph-shortcode.php:168
 msgid "List"
 msgstr ""
 
 #. translators: %s: the current view name (Tree, Grid, or List).
-#: includes/class-teamgraph-shortcode.php:127
+#: includes/class-teamgraph-shortcode.php:170
+#, php-format
 msgid "Switch view, currently %s"
 msgstr ""
 
-#. translators: %s: the current view name (Tree, Grid, or List).
-#: includes/class-teamgraph-shortcode.php:128
+#: includes/class-teamgraph-shortcode.php:171
 msgid "Switch view"
 msgstr ""
 
-#. translators: %s: the current view name (Tree, Grid, or List).
-#: includes/class-teamgraph-shortcode.php:129
+#: includes/class-teamgraph-shortcode.php:172
 msgid "Could not load that view."
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:263
+#: includes/class-teamgraph-shortcode.php:308
 msgid "No team members to show."
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:359
+#: includes/class-teamgraph-shortcode.php:404
 msgid "Team members by reporting line"
 msgstr ""
 
-#: includes/class-teamgraph-shortcode.php:475
+#: includes/class-teamgraph-shortcode.php:520
 msgid "Team members"
 msgstr ""
 
 #. translators: %d: HTTP status code.
+#: build/admin.js:2
 #: src/admin/api.js:37
+#, js-format
 msgid "Request failed (%d)"
 msgstr ""
 
-#: src/admin/components.js:106
-msgid "No matches."
+#: build/admin.js:2
+#: src/admin/toast.js:85
+msgid "Dismiss"
 msgstr ""
 
-#: src/admin/components.js:128
-msgid "Choose a photo"
-msgstr ""
-
-#: src/admin/components.js:129
-msgid "Use this photo"
-msgstr ""
-
-#: src/admin/components.js:155
-msgid "Change photo"
-msgstr ""
-
-#: src/admin/components.js:155
-msgid "Choose photo"
-msgstr ""
-
-#: src/admin/components.js:163 src/admin/pages/Settings.js:579
-msgid "Remove"
-msgstr ""
-
+#: build/admin.js:2
 #: src/admin/components.js:18
 msgid "No manager (top level)"
 msgstr ""
 
-#: src/admin/components.js:213 src/admin/pages/Builder.js:569 src/admin/pages/MemberForm.js:315
+#: build/admin.js:2
+#: build/admin.js:13
+#: src/admin/components.js:71
+#: src/admin/pages/Members.js:279
+msgid "Search members…"
+msgstr ""
+
+#: build/admin.js:2
+#: src/admin/components.js:106
+msgid "No matches."
+msgstr ""
+
+#: build/admin.js:2
+#: src/admin/components.js:128
+msgid "Choose a photo"
+msgstr ""
+
+#: build/admin.js:2
+#: src/admin/components.js:129
+msgid "Use this photo"
+msgstr ""
+
+#: build/admin.js:2
+#: src/admin/components.js:155
+msgid "Change photo"
+msgstr ""
+
+#: build/admin.js:2
+#: src/admin/components.js:155
+msgid "Choose photo"
+msgstr ""
+
+#: build/admin.js:2
+#: build/admin.js:44
+#: src/admin/components.js:163
+#: src/admin/pages/Settings.js:579
+msgid "Remove"
+msgstr ""
+
+#: build/admin.js:2
+#: build/admin.js:29
+#: build/admin.js:34
+#: src/admin/components.js:213
+#: src/admin/pages/Builder.js:569
+#: src/admin/pages/MemberForm.js:315
 msgid "None"
 msgstr ""
 
+#: build/admin.js:2
 #: src/admin/components.js:218
 msgid "Clear"
 msgstr ""
 
-#. translators: %s: the shortcode that was copied, e.g. [teamgraph].
-#: src/admin/components.js:391
-msgid "Copied %s to the clipboard."
-msgstr ""
-
-#: src/admin/components.js:400
-msgid "Could not copy automatically. Select the shortcode and copy it."
-msgstr ""
-
+#: build/admin.js:2
 #: src/admin/components.js:427
 msgid "About shortcodes"
 msgstr ""
 
+#: build/admin.js:2
 #: src/admin/components.js:446
 msgid "Render your org chart anywhere"
 msgstr ""
 
+#: build/admin.js:2
 #: src/admin/components.js:448
 msgid "Paste this shortcode into any page or post."
 msgstr ""
 
+#: build/admin.js:2
 #: src/admin/components.js:461
 msgid "Copy shortcode"
 msgstr ""
 
+#. translators: %s: the shortcode that was copied, e.g. [teamgraph].
+#: build/admin.js:3
+#: src/admin/components.js:391
+#, js-format
+msgid "Copied %s to the clipboard."
+msgstr ""
+
+#: build/admin.js:3
+#: src/admin/components.js:400
+msgid "Could not copy automatically. Select the shortcode and copy it."
+msgstr ""
+
+#: build/admin.js:3
 #: src/admin/components.js:473
 msgid "Attributes"
 msgstr ""
 
+#: build/admin.js:3
 #: src/admin/components.js:476
 msgid "Change what it shows — for example <view /> to switch layout, or <dept /> to filter."
 msgstr ""
 
+#: build/admin.js:3
 #: src/admin/components.js:495
 msgid "Learn more"
 msgstr ""
 
+#: build/admin.js:3
 #: src/admin/components.js:496
 msgid "See all available attributes and examples."
 msgstr ""
 
+#: build/admin.js:3
 #: src/admin/components.js:519
 msgid "Cancel"
 msgstr ""
 
+#: build/admin.js:3
 #: src/admin/components.js:522
 msgid "Delete"
 msgstr ""
 
+#: build/admin.js:3
 #: src/admin/components.js:567
 msgid "New Member"
 msgstr ""
 
+#: build/admin.js:3
 #: src/admin/components.js:585
 msgid "Loading"
 msgstr ""
 
+#: build/admin.js:3
 #: src/admin/components.js:595
 msgid "Build your first org chart"
 msgstr ""
 
+#: build/admin.js:3
 #: src/admin/components.js:597
 msgid "Add your team one member at a time, or load a small sample organization to explore the builder, color guides, and the front-end chart. Sample data can be removed at any time from the Settings screen."
 msgstr ""
 
+#: build/admin.js:3
 #: src/admin/components.js:619
 msgid "Loading sample…"
 msgstr ""
 
+#: build/admin.js:3
 #: src/admin/components.js:620
 msgid "Load sample organization"
 msgstr ""
 
-#: src/admin/components.js:71 src/admin/pages/Members.js:279
-msgid "Search members…"
-msgstr ""
-
-#: src/admin/pages/Builder.js:181
-msgid "Chart updated."
-msgstr ""
-
-#: src/admin/pages/Builder.js:241
-msgid "Member added."
-msgstr ""
-
-#: src/admin/pages/Builder.js:241
-msgid "Member saved."
-msgstr ""
-
-#: src/admin/pages/Builder.js:256
-msgid "Member moved to the trash."
-msgstr ""
-
-#. translators: %s: member name.
-#: src/admin/pages/Builder.js:324
-msgid "Expand %s"
-msgstr ""
-
-#. translators: %s: member name.
-#: src/admin/pages/Builder.js:326
-msgid "Collapse %s"
-msgstr ""
-
-#: src/admin/pages/Builder.js:357
-msgid "+ Add Direct Report"
-msgstr ""
-
-#. translators: %s: member name.
-#: src/admin/pages/Builder.js:364 src/admin/pages/Members.js:465
-msgid "Edit %s"
-msgstr ""
-
-#. translators: %s: member name.
-#. translators: %s: department or location name.
-#: src/admin/pages/Builder.js:376 src/admin/pages/Members.js:476 src/admin/pages/Organization.js:94
-msgid "Delete %s"
-msgstr ""
-
-#: src/admin/pages/Builder.js:422
-msgid "Search the tree…"
-msgstr ""
-
-#: src/admin/pages/Builder.js:425
-msgid "Search the tree"
-msgstr ""
-
-#: src/admin/pages/Builder.js:429
-msgid "Drag onto a member to change their manager; drag above or below to reorder siblings."
-msgstr ""
-
-#: src/admin/pages/Builder.js:445
-msgid "Sample organization loaded."
-msgstr ""
-
-#. translators: %s: member name.
-#: src/admin/pages/Builder.js:468 src/admin/pages/MemberForm.js:221
-msgid "Edit: %s"
-msgstr ""
-
-#: src/admin/pages/Builder.js:476
-msgid "Close"
-msgstr ""
-
-#: src/admin/pages/Builder.js:494 src/admin/pages/MemberForm.js:234
-msgid "Name *"
-msgstr ""
-
-#: src/admin/pages/Builder.js:503 src/admin/pages/MemberForm.js:239 src/admin/pages/Members.js:356
-msgid "Job Title"
-msgstr ""
-
-#: src/admin/pages/Builder.js:512 src/admin/pages/MemberForm.js:245
-msgid "Email"
-msgstr ""
-
-#: src/admin/pages/Builder.js:520 src/admin/pages/MemberForm.js:249
-msgid "Phone"
-msgstr ""
-
-#: src/admin/pages/Builder.js:529 src/admin/pages/MemberForm.js:255
-msgid "Profile Link"
-msgstr ""
-
-#: src/admin/pages/Builder.js:537 src/admin/pages/MemberForm.js:285 src/admin/pages/Members.js:357
-msgid "Reports To"
-msgstr ""
-
-#: src/admin/pages/Builder.js:553 src/admin/pages/Builder.js:580 src/admin/pages/MemberForm.js:300 src/admin/pages/MemberForm.js:327
-msgid "Inherit from manager"
-msgstr ""
-
-#: src/admin/pages/Builder.js:578 src/admin/pages/MemberForm.js:325
-msgid "Color Guide"
-msgstr ""
-
-#: src/admin/pages/Builder.js:589 src/admin/pages/MemberForm.js:337
-msgid "Photo"
-msgstr ""
-
-#: src/admin/pages/Builder.js:607 src/admin/pages/MemberForm.js:355 src/admin/pages/Settings.js:378 src/admin/pages/Theme.js:180
-msgid "Saving…"
-msgstr ""
-
-#: src/admin/pages/Builder.js:607
-msgid "Save"
-msgstr ""
-
-#: src/admin/pages/Builder.js:617 src/admin/pages/Members.js:521
-msgid "Delete member?"
-msgstr ""
-
-#. translators: %s: member name.
-#: src/admin/pages/Builder.js:622
-msgid "“%s” will be moved to the trash. Their direct reports will move up one level."
-msgstr ""
-
-#. translators: %s: member name.
-#: src/admin/pages/Builder.js:630
-msgid "“%s” will be moved to the trash."
-msgstr ""
-
-#: src/admin/pages/Docs.js:108
-msgid "Displaying on your site"
-msgstr ""
-
-#: src/admin/pages/Docs.js:110
-msgid "Add the TeamGraph Chart block to any page, or use the shortcode. Both render the same three views. The Team Members screen has an information button that copies the basic shortcode for you. Examples:"
-msgstr ""
-
-#: src/admin/pages/Docs.js:126
-msgid "Attribute"
-msgstr ""
-
-#: src/admin/pages/Docs.js:127
-msgid "Default"
-msgstr ""
-
-#: src/admin/pages/Docs.js:128 src/admin/pages/Settings.js:550
-msgid "Notes"
-msgstr ""
-
-#: src/admin/pages/Docs.js:14
-msgid "tree (org chart), grid (cards), or list (directory)."
-msgstr ""
-
-#: src/admin/pages/Docs.js:146
-msgid "Views & filtering"
-msgstr ""
-
-#: src/admin/pages/Docs.js:148
-msgid "Tree is the org chart with connector lines; grid is a flat card grid with type-to-filter; list is an indented directory. Department and location filters prune the tree — matching members keep their mutual reporting lines, and matching reports of a non-matching manager are promoted up."
-msgstr ""
-
-#: src/admin/pages/Docs.js:156
-msgid "Importing & exporting"
-msgstr ""
-
-#: src/admin/pages/Docs.js:158
-msgid "Use the CSV Import & Export tab to move your team in and out as a spreadsheet. The exported file re-imports cleanly, so it doubles as a backup. See the CSV Guide tab for the exact column format and a downloadable template."
-msgstr ""
-
-#: src/admin/pages/Docs.js:166
-msgid "Accessibility"
-msgstr ""
-
-#: src/admin/pages/Docs.js:168
-msgid "Every view is semantic HTML — the chart is a nested list styled with CSS, so screen readers announce the reporting hierarchy natively, keyboard focus is visible throughout, and the chart works with JavaScript disabled. On phones it reflows into a readable indented list, and it prints cleanly."
-msgstr ""
-
-#: src/admin/pages/Docs.js:176
-msgid "Your data"
-msgstr ""
-
-#: src/admin/pages/Docs.js:178
-msgid "TeamGraph makes no external requests — all data stays in your WordPress database. Uninstalling keeps your team unless you enable “Delete all data on uninstall” on the General tab."
-msgstr ""
-
-#: src/admin/pages/Docs.js:19
-msgid "Member ID to chart a single branch; 0 charts the whole organization."
-msgstr ""
-
-#: src/admin/pages/Docs.js:24
-msgid "Department name or slug. Keeps only that department; reporting lines are preserved."
-msgstr ""
-
-#: src/admin/pages/Docs.js:29
-msgid "Location name or slug. Same filtering, on the location taxonomy."
-msgstr ""
-
-#: src/admin/pages/Docs.js:34
-msgid "Set to \"true\" to add zoom, expand-all, and fullscreen controls above the chart."
-msgstr ""
-
-#: src/admin/pages/Docs.js:39
-msgid "Set to \"true\" to let visitors switch between tree, grid, and list."
-msgstr ""
-
-#: src/admin/pages/Docs.js:47
-msgid "Getting started"
-msgstr ""
-
-#: src/admin/pages/Docs.js:49
-msgid "TeamGraph turns your team into reusable people records you manage once and display anywhere. Add members one at a time, or load a sample organization from the Sample Data tab to explore first — you can remove the sample at any time."
-msgstr ""
-
-#: src/admin/pages/Docs.js:57
-msgid "Adding & editing members"
-msgstr ""
-
-#: src/admin/pages/Docs.js:59
-msgid "On the Team Members screen, choose Add Member. Give each person a name (required), and optionally a job title, email, phone, profile link, biography, photo, department, and location. The “Reports to” picker sets the person’s manager — it never offers a choice that would create a reporting cycle. A live preview shows the card as it will appear."
-msgstr ""
-
-#: src/admin/pages/Docs.js:67
-msgid "Deleting & restoring"
-msgstr ""
-
-#: src/admin/pages/Docs.js:69
-msgid "Deleting a member moves them to the Trash tab on the Team Members screen — nothing is lost right away. From there you can Restore them (which also re-attaches any direct reports that were moved up when you deleted them) or Delete Permanently. Emptying the trash, or WordPress’s automatic cleanup after about 30 days, removes trashed members for good."
-msgstr ""
-
-#: src/admin/pages/Docs.js:77
-msgid "Building the chart"
-msgstr ""
-
-#: src/admin/pages/Docs.js:79
-msgid "The Chart Builder shows the whole organization as a drag-and-drop tree. Drag a member onto another to change who they report to, or drag above/below a member to reorder siblings. Use the search box to jump to anyone, and the slide-in drawer to edit without leaving the tree. Deleting a manager moves their direct reports up one level, so branches are never orphaned."
-msgstr ""
-
-#: src/admin/pages/Docs.js:87
-msgid "Departments & locations"
-msgstr ""
-
-#: src/admin/pages/Docs.js:89
-msgid "Manage these on the Organization screen, then assign them per member. A department is inherited down the reporting line until someone sets their own — so you only tag the head of each branch. Locations are individual and do not inherit. On the chart, a pill appears wherever a branch’s department changes."
-msgstr ""
-
-#: src/admin/pages/Docs.js:97
-msgid "Color guides (Theme)"
-msgstr ""
-
-#: src/admin/pages/Docs.js:99
-msgid "On the Theme screen, create color guides with up to eight levels (card background, optional gradient, text, and pill colors). Assign a guide to a member and it styles their branch, shading each level deeper down the tree. Contrast is checked live against WCAG AA as you pick colors."
-msgstr ""
-
-#: src/admin/pages/MemberForm.js:130
-msgid "Member created."
-msgstr ""
-
-#: src/admin/pages/MemberForm.js:195
-msgid "Saved."
-msgstr ""
-
-#: src/admin/pages/MemberForm.js:227
-msgid "All Members"
-msgstr ""
-
-#: src/admin/pages/MemberForm.js:265
-msgid "Bio"
-msgstr ""
-
-#: src/admin/pages/MemberForm.js:268
-msgid "A short biography…"
-msgstr ""
-
-#: src/admin/pages/MemberForm.js:357 src/admin/pages/Theme.js:182
-msgid "Save Changes"
-msgstr ""
-
-#: src/admin/pages/MemberForm.js:364 src/admin/pages/Theme.js:336
-msgid "Live Preview"
-msgstr ""
-
-#: src/admin/pages/MemberForm.js:375
-msgid "Department pills and colors shown here appear on the chart wherever this member’s branch diverges from their manager’s."
-msgstr ""
-
-#. translators: %d: number of members moved to trash.
-#: src/admin/pages/Members.js:147
-msgid "%d member moved to the trash."
-msgid_plural "%d members moved to the trash."
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: %d: number of members restored.
-#: src/admin/pages/Members.js:169
-msgid "%d member restored."
-msgid_plural "%d members restored."
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: %d: number of members permanently deleted.
-#: src/admin/pages/Members.js:187 src/admin/pages/Members.js:209
-msgid "%d member permanently deleted."
-msgid_plural "%d members permanently deleted."
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/admin/pages/Members.js:254
-msgid "All"
-msgstr ""
-
-#: src/admin/pages/Members.js:263
-msgid "Top-Level"
-msgstr ""
-
-#: src/admin/pages/Members.js:272
-msgid "Trash"
-msgstr ""
-
-#: src/admin/pages/Members.js:282
-msgid "Search members"
-msgstr ""
-
-#: src/admin/pages/Members.js:291 src/admin/pages/Members.js:588
-msgid "Empty Trash"
-msgstr ""
-
-#. translators: %d: number of selected members.
-#: src/admin/pages/Members.js:301
-msgid "%d selected"
-msgid_plural "%d selected"
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/admin/pages/Members.js:312
-msgid "Restore selected"
-msgstr ""
-
-#: src/admin/pages/Members.js:319 src/admin/pages/Members.js:575
-msgid "Delete permanently"
-msgstr ""
-
-#: src/admin/pages/Members.js:328
-msgid "Delete selected"
-msgstr ""
-
-#: src/admin/pages/Members.js:332
-msgid "Clear selection"
-msgstr ""
-
-#: src/admin/pages/Members.js:346
-msgid "Select all members on this page"
-msgstr ""
-
-#: src/admin/pages/Members.js:352
-msgid "Name"
-msgstr ""
-
-#: src/admin/pages/Members.js:358
-msgid "Direct Reports"
-msgstr ""
-
-#: src/admin/pages/Members.js:361
-msgid "Order"
-msgstr ""
-
-#: src/admin/pages/Members.js:383
-msgid "Trash is empty."
-msgstr ""
-
-#: src/admin/pages/Members.js:384
-msgid "No members found."
-msgstr ""
-
-#. translators: %s: member name.
-#: src/admin/pages/Members.js:398
-msgid "Select %s"
-msgstr ""
-
-#: src/admin/pages/Members.js:421
-msgid "Top level"
-msgstr ""
-
-#. translators: %s: member name.
-#: src/admin/pages/Members.js:438
-msgid "Restore %s"
-msgstr ""
-
-#. translators: %s: member name.
-#: src/admin/pages/Members.js:450
-msgid "Permanently delete %s"
-msgstr ""
-
-#: src/admin/pages/Members.js:494
-msgid "‹ Prev"
-msgstr ""
-
-#. translators: 1: current page, 2: total pages, 3: total members.
-#: src/admin/pages/Members.js:499
-msgid "Page %1$d of %2$d (%3$d members)"
-msgstr ""
-
-#: src/admin/pages/Members.js:510
-msgid "Next ›"
-msgstr ""
-
-#. translators: %d: number of members.
-#: src/admin/pages/Members.js:524
-msgid "Delete %d members?"
-msgstr ""
-
-#. translators: %s: member name.
-#: src/admin/pages/Members.js:532
-msgid "“%s” will be moved to the trash. You can restore it from the Trash tab."
-msgstr ""
-
-#: src/admin/pages/Members.js:536
-msgid "Their direct reports will move up one level."
-msgstr ""
-
-#. translators: %d: number of members.
-#: src/admin/pages/Members.js:540
-msgid "%d members will be moved to the trash. Any direct reports they have will move up one level. You can restore them from the Trash tab."
-msgstr ""
-
-#: src/admin/pages/Members.js:556
-msgid "Permanently delete member?"
-msgstr ""
-
-#. translators: %d: number of members.
-#: src/admin/pages/Members.js:559
-msgid "Permanently delete %d members?"
-msgstr ""
-
-#. translators: %s: member name.
-#: src/admin/pages/Members.js:567
-msgid "“%s” will be permanently deleted. This cannot be undone."
-msgstr ""
-
-#: src/admin/pages/Members.js:570
-msgid "These members will be permanently deleted. This cannot be undone."
-msgstr ""
-
-#: src/admin/pages/Members.js:583
-msgid "Empty the trash?"
-msgstr ""
-
-#: src/admin/pages/Members.js:584
-msgid "Every member in the trash will be permanently deleted. This cannot be undone."
-msgstr ""
-
-#: src/admin/pages/Members.js:92
-msgid "Sample organization loaded. You can remove it any time from Settings."
-msgstr ""
-
-#: src/admin/pages/Organization.js:114
-msgid "Add"
-msgstr ""
-
-#: src/admin/pages/Organization.js:158
-msgid "Departments and locations are assigned to members on their profile. A department is inherited by a member’s reports until one of them sets their own; locations are individual."
-msgstr ""
-
-#: src/admin/pages/Organization.js:168
-msgid "New department…"
-msgstr ""
-
-#: src/admin/pages/Organization.js:177
-msgid "New location…"
-msgstr ""
-
-#. translators: %s: singular taxonomy label, e.g. Department.
-#: src/admin/pages/Organization.js:35
-msgid "%s added."
-msgstr ""
-
+#: build/admin.js:3
 #: src/admin/pages/Organization.js:43
 msgid "Rename"
 msgstr ""
 
 #. translators: %s: singular taxonomy label, e.g. Department.
+#: build/admin.js:5
 #: src/admin/pages/Organization.js:51
+#, js-format
 msgid "%s renamed."
 msgstr ""
 
 #. translators: %s: singular taxonomy label, e.g. Department.
+#: build/admin.js:7
 #: src/admin/pages/Organization.js:62
+#, js-format
 msgid "%s deleted."
 msgstr ""
 
 #. translators: %s: department or location name.
+#: build/admin.js:8
 #: src/admin/pages/Organization.js:82
+#, js-format
 msgid "Rename %s"
 msgstr ""
 
-#: src/admin/pages/Settings.js:107
-msgid "General"
+#. translators: %s: department or location name.
+#: build/admin.js:9
+#: src/admin/pages/Organization.js:94
+#, js-format
+msgctxt "department or location"
+msgid "Delete %s"
 msgstr ""
 
-#: src/admin/pages/Settings.js:108
-msgid "Sample Data"
+#. translators: %s: singular taxonomy label, e.g. Department.
+#: build/admin.js:11
+#: src/admin/pages/Organization.js:35
+#, js-format
+msgid "%s added."
 msgstr ""
 
-#: src/admin/pages/Settings.js:109
-msgid "CSV Import & Export"
+#: build/admin.js:11
+#: src/admin/pages/Organization.js:118
+msgid "Add"
 msgstr ""
 
-#: src/admin/pages/Settings.js:110
-msgid "CSV Guide"
-msgstr ""
-
-#: src/admin/pages/Settings.js:111
-msgid "Docs"
-msgstr ""
-
-#: src/admin/pages/Settings.js:140
-msgid "Settings sections"
-msgstr ""
-
-#: src/admin/pages/Settings.js:22
-msgid "Full name. A row whose name matches an existing member updates that member instead of creating a duplicate."
-msgstr ""
-
-#: src/admin/pages/Settings.js:253
-msgid "Settings saved."
-msgstr ""
-
-#: src/admin/pages/Settings.js:267
-msgid "Sample organization loaded. Take a look at the Chart Builder to see it."
-msgstr ""
-
-#. translators: %d: number of members removed.
-#: src/admin/pages/Settings.js:285
-msgid "Sample data removed (%d members)."
-msgstr ""
-
-#: src/admin/pages/Settings.js:30
-msgid "Shown under the name on cards."
-msgstr ""
-
-#: src/admin/pages/Settings.js:301
-msgid "Members exported."
-msgstr ""
-
-#. translators: 1: created count, 2: updated count, 3: skipped count.
-#: src/admin/pages/Settings.js:322
-msgid "Import finished: %1$d created, %2$d updated, %3$d skipped."
-msgstr ""
-
-#: src/admin/pages/Settings.js:35
-msgid "Contact email shown on cards."
-msgstr ""
-
-#: src/admin/pages/Settings.js:363
-msgid "Delete all TeamGraph data when the plugin is uninstalled"
-msgstr ""
-
-#: src/admin/pages/Settings.js:368
-msgid "Members, departments, locations, and color guides are removed permanently when the plugin is deleted from the Plugins screen. Leave off to keep data through a reinstall."
-msgstr ""
-
-#: src/admin/pages/Settings.js:378
-msgid "Save Settings"
-msgstr ""
-
-#: src/admin/pages/Settings.js:387
-msgid "Sample data"
-msgstr ""
-
-#: src/admin/pages/Settings.js:391
-msgid "The sample organization is loaded. Removing it deletes only the seeded members, departments, locations, and color guide — your own content is untouched."
-msgstr ""
-
-#: src/admin/pages/Settings.js:40
-msgid "Contact phone shown on cards."
-msgstr ""
-
-#: src/admin/pages/Settings.js:403
-msgid "Removing…"
-msgstr ""
-
-#: src/admin/pages/Settings.js:404
-msgid "Remove sample data"
-msgstr ""
-
-#: src/admin/pages/Settings.js:410
-msgid "Load a small sample organization — members, departments, locations, and a color guide — to explore TeamGraph. You can remove it again from here with one click."
-msgstr ""
-
-#: src/admin/pages/Settings.js:421
-msgid "Loading…"
-msgstr ""
-
-#: src/admin/pages/Settings.js:421
-msgid "Load sample data"
-msgstr ""
-
-#: src/admin/pages/Settings.js:430
-msgid "Export Members"
-msgstr ""
-
-#: src/admin/pages/Settings.js:432
-msgid "Download every member as a CSV file — including job title, contact details, department, location, and manager. The file re-imports cleanly, so it doubles as a backup."
-msgstr ""
-
-#: src/admin/pages/Settings.js:443
-msgid "Exporting…"
-msgstr ""
-
-#: src/admin/pages/Settings.js:443
-msgid "Download CSV"
-msgstr ""
-
-#: src/admin/pages/Settings.js:448
-msgid "Import Members"
-msgstr ""
-
-#: src/admin/pages/Settings.js:45
-msgid "Optional profile link; the name on the card links to it."
-msgstr ""
-
-#: src/admin/pages/Settings.js:450
-msgid "Import members from a CSV file. Rows matching an existing member’s name update that member; new names are created. Unknown departments and locations are created automatically. See the CSV Guide tab for the format."
-msgstr ""
-
-#: src/admin/pages/Settings.js:457
-msgid "Change File"
-msgstr ""
-
-#: src/admin/pages/Settings.js:457
-msgid "Choose File"
-msgstr ""
-
-#: src/admin/pages/Settings.js:461
-msgid "CSV file to import"
-msgstr ""
-
-#: src/admin/pages/Settings.js:479
-msgid "Importing…"
-msgstr ""
-
-#: src/admin/pages/Settings.js:479
-msgid "Import"
-msgstr ""
-
-#: src/admin/pages/Settings.js:485
-msgid "Warnings"
-msgstr ""
-
-#: src/admin/pages/Settings.js:498
-msgid "CSV format"
-msgstr ""
-
-#: src/admin/pages/Settings.js:50
-msgid "Department name — created automatically if it doesn’t exist yet. Leave empty to inherit the manager’s department."
-msgstr ""
-
-#: src/admin/pages/Settings.js:500
-msgid "The first row must be a header naming the columns. Only"
-msgstr ""
-
-#: src/admin/pages/Settings.js:502
-msgid "is required — every other column is optional, and extra columns are ignored. Here’s what a file looks like:"
-msgstr ""
-
-#: src/admin/pages/Settings.js:511
-msgid "Example CSV contents"
-msgstr ""
-
-#: src/admin/pages/Settings.js:541
-msgid "Download template CSV"
-msgstr ""
-
-#: src/admin/pages/Settings.js:544
-msgid "Columns"
-msgstr ""
-
-#: src/admin/pages/Settings.js:548
-msgid "Column"
-msgstr ""
-
-#: src/admin/pages/Settings.js:549
-msgid "Required"
-msgstr ""
-
-#: src/admin/pages/Settings.js:559
-msgid "Yes"
-msgstr ""
-
-#: src/admin/pages/Settings.js:559
-msgid "No"
-msgstr ""
-
-#: src/admin/pages/Settings.js:574
-msgid "Remove sample data?"
-msgstr ""
-
-#: src/admin/pages/Settings.js:575
-msgid "All seeded sample members, departments, locations, and the sample color guide will be permanently deleted."
-msgstr ""
-
-#: src/admin/pages/Settings.js:58
-msgid "Location name — created automatically if it doesn’t exist yet."
-msgstr ""
-
-#: src/admin/pages/Settings.js:63
-msgid "The manager’s name, exactly as it appears in their own row (row order doesn’t matter). Leave empty for top-level members."
-msgstr ""
-
-#: src/admin/pages/Settings.js:71
-msgid "Biography. Plain text or simple HTML."
-msgstr ""
-
-#: src/admin/pages/Theme.js:152
-msgid "Color guides saved."
-msgstr ""
-
-#: src/admin/pages/Theme.js:183
-msgid "Saved"
-msgstr ""
-
-#: src/admin/pages/Theme.js:190
-msgid "Color Guides"
-msgstr ""
-
-#. translators: %s: color guide name.
-#: src/admin/pages/Theme.js:210
-msgid "Delete color guide “%s”"
-msgstr ""
-
-#: src/admin/pages/Theme.js:221
-msgid "+ New Group"
-msgstr ""
-
-#: src/admin/pages/Theme.js:228
-msgid "Group Name"
-msgstr ""
-
-#. translators: %d: level number.
-#: src/admin/pages/Theme.js:243 src/admin/pages/Theme.js:342
-msgid "Level %d"
-msgstr ""
-
-#: src/admin/pages/Theme.js:247
-msgid "(deeper levels reuse this style)"
-msgstr ""
-
-#: src/admin/pages/Theme.js:252
-msgid "Card"
-msgstr ""
-
-#: src/admin/pages/Theme.js:257
-msgid "Gradient end"
-msgstr ""
-
-#: src/admin/pages/Theme.js:263
-msgid "Text"
-msgstr ""
-
-#: src/admin/pages/Theme.js:268
-msgid "Pill"
-msgstr ""
-
-#: src/admin/pages/Theme.js:27
-msgid "New Group"
-msgstr ""
-
-#. translators: %d: level number.
-#: src/admin/pages/Theme.js:283
-msgid "Remove level %d"
-msgstr ""
-
-#. translators: 1: current level count, 2: maximum levels.
-#: src/admin/pages/Theme.js:321
-msgid "+ Add Level (%1$d/%2$d)"
-msgstr ""
-
-#: src/admin/pages/Theme.js:330
-msgid "Create a color guide to get started."
-msgstr ""
-
-#: src/admin/pages/Theme.js:347
-msgid "Group starts here"
-msgstr ""
-
-#. translators: %d: nesting depth.
-#: src/admin/pages/Theme.js:350
-msgid "Depth %d"
-msgstr ""
-
-#: src/admin/pages/Theme.js:364
-msgid "Delete color guide?"
-msgstr ""
-
-#. translators: %s: color guide name.
-#: src/admin/pages/Theme.js:367
-msgid "Members assigned to “%s” will fall back to inherited styling. This is applied when you save."
-msgstr ""
-
+#: build/admin.js:11
 #: src/admin/pages/Theme.js:66
 msgid "Card text"
 msgstr ""
 
-#: src/admin/pages/Theme.js:67 src/admin/pages/Theme.js:273
+#: build/admin.js:11
+#: build/admin.js:38
+#: src/admin/pages/Theme.js:67
+#: src/admin/pages/Theme.js:273
 msgid "Pill text"
 msgstr ""
 
+#: build/admin.js:11
 #: src/admin/pages/Theme.js:70
 msgid "Card text on gradient end"
 msgstr ""
 
 #. translators: 1: color role (e.g. Card text), 2: contrast ratio.
+#: build/admin.js:12
 #: src/admin/pages/Theme.js:79
+#, js-format
 msgid "%1$s: %2$s:1 — below the WCAG AA minimum of 4.5:1."
 msgstr ""
 
-#: src/admin/toast.js:85
-msgid "Dismiss"
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:14
+msgid "tree (org chart), grid (cards), or list (directory)."
 msgstr ""
 
-#: src/block/index.js:102
-msgid "Chart settings"
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:19
+msgid "Member ID to chart a single branch; 0 charts the whole organization."
 msgstr ""
 
-#: src/block/index.js:104
-msgid "View"
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:24
+msgid "Department name or slug. Keeps only that department; reporting lines are preserved."
 msgstr ""
 
-#: src/block/index.js:110
-msgid "Start from"
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:29
+msgid "Location name or slug. Same filtering, on the location taxonomy."
 msgstr ""
 
-#: src/block/index.js:113
-msgid "Whole organization"
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:34
+msgid "Set to \"true\" to add zoom, expand-all, and fullscreen controls above the chart."
 msgstr ""
 
-#: src/block/index.js:120
-msgid "Chart a single branch by picking its top member."
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:39
+msgid "Set to \"true\" to let visitors switch between tree, grid, and list."
 msgstr ""
 
-#: src/block/index.js:125
-msgid "All departments"
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:47
+msgid "Getting started"
 msgstr ""
 
-#: src/block/index.js:131
-msgid "All locations"
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:49
+msgid "TeamGraph turns your team into reusable people records you manage once and display anywhere. Add members one at a time, or load a sample organization from the Sample Data tab to explore first — you can remove the sample at any time."
 msgstr ""
 
-#: src/block/index.js:135
-msgid "Visitor tools"
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:57
+msgid "Adding & editing members"
 msgstr ""
 
-#: src/block/index.js:137
-msgid "Show toolbar"
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:59
+msgid "On the Team Members screen, choose Add Member. Give each person a name (required), and optionally a job title, email, phone, profile link, biography, photo, department, and location. The “Reports to” picker sets the person’s manager — it never offers a choice that would create a reporting cycle. A live preview shows the card as it will appear."
 msgstr ""
 
-#: src/block/index.js:140
-msgid "Adds zoom, expand all, and fullscreen controls above the chart. Dragging to pan the org chart is always available."
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:67
+msgid "Deleting & restoring"
 msgstr ""
 
-#: src/block/index.js:143
-msgid "Let visitors switch views"
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:69
+msgid "Deleting a member moves them to the Trash tab on the Team Members screen — nothing is lost right away. From there you can Restore them (which also re-attaches any direct reports that were moved up when you deleted them) or Delete Permanently. Emptying the trash, or WordPress’s automatic cleanup after about 30 days, removes trashed members for good."
 msgstr ""
 
-#: src/block/index.js:147
-msgid "Adds Tree / Grid / List buttons to the toolbar. Visitors can override the view chosen above."
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:77
+msgid "Building the chart"
 msgstr ""
 
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:79
+msgid "The Chart Builder shows the whole organization as a drag-and-drop tree. Drag a member onto another to change who they report to, or drag above/below a member to reorder siblings. Use the search box to jump to anyone, and the slide-in drawer to edit without leaving the tree. Deleting a manager moves their direct reports up one level, so branches are never orphaned."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:87
+msgid "Departments & locations"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:89
+msgid "Manage these on the Organization screen, then assign them per member. A department is inherited down the reporting line until someone sets their own — so you only tag the head of each branch. Locations are individual and do not inherit. On the chart, a pill appears wherever a branch’s department changes."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:97
+msgid "Color guides (Theme)"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:99
+msgid "On the Theme screen, create color guides with up to eight levels (card background, optional gradient, text, and pill colors). Assign a guide to a member and it styles their branch, shading each level deeper down the tree. Contrast is checked live against WCAG AA as you pick colors."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:108
+msgid "Displaying on your site"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:110
+msgid "Add the TeamGraph Chart block to any page, or use the shortcode. Both render the same three views. The Team Members screen has an information button that copies the basic shortcode for you. Examples:"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:126
+msgid "Attribute"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:127
+msgid "Default"
+msgstr ""
+
+#: build/admin.js:12
+#: build/admin.js:44
+#: src/admin/pages/Docs.js:128
+#: src/admin/pages/Settings.js:550
+msgid "Notes"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:146
+msgid "Views & filtering"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:148
+msgid "Tree is the org chart with connector lines; grid is a flat card grid with type-to-filter; list is an indented directory. Department and location filters prune the tree — matching members keep their mutual reporting lines, and matching reports of a non-matching manager are promoted up."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:156
+msgid "Importing & exporting"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:158
+msgid "Use the CSV Import & Export tab to move your team in and out as a spreadsheet. The exported file re-imports cleanly, so it doubles as a backup. See the CSV Guide tab for the exact column format and a downloadable template."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:166
+msgid "Accessibility"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:168
+msgid "Every view is semantic HTML — the chart is a nested list styled with CSS, so screen readers announce the reporting hierarchy natively, keyboard focus is visible throughout, and the chart works with JavaScript disabled. On phones it reflows into a readable indented list, and it prints cleanly."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:176
+msgid "Your data"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Docs.js:178
+msgid "TeamGraph makes no external requests — all data stays in your WordPress database. Uninstalling keeps your team unless you enable “Delete all data on uninstall” on the General tab."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:22
+msgid "Full name. A row whose name matches an existing member updates that member instead of creating a duplicate."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:30
+msgid "Shown under the name on cards."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:35
+msgid "Contact email shown on cards."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:40
+msgid "Contact phone shown on cards."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:45
+msgid "Optional profile link; the name on the card links to it."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:50
+msgid "Department name — created automatically if it doesn’t exist yet. Leave empty to inherit the manager’s department."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:58
+msgid "Location name — created automatically if it doesn’t exist yet."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:63
+msgid "The manager’s name, exactly as it appears in their own row (row order doesn’t matter). Leave empty for top-level members."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:71
+msgid "Biography. Plain text or simple HTML."
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:107
+msgid "General"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:108
+msgid "Sample Data"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:109
+msgid "CSV Import & Export"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:110
+msgid "CSV Guide"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:111
+msgid "Docs"
+msgstr ""
+
+#: build/admin.js:12
+#: src/admin/pages/Settings.js:140
+msgid "Settings sections"
+msgstr ""
+
+#. translators: %d: number of members restored.
+#: build/admin.js:13
+#: src/admin/pages/Members.js:169
+#, js-format
+msgid "%d member restored."
+msgid_plural "%d members restored."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:13
+#: src/admin/pages/Members.js:92
+msgid "Sample organization loaded. You can remove it any time from Settings."
+msgstr ""
+
+#: build/admin.js:13
+#: src/admin/pages/Members.js:254
+msgid "All"
+msgstr ""
+
+#: build/admin.js:13
+#: src/admin/pages/Members.js:263
+msgid "Top-Level"
+msgstr ""
+
+#: build/admin.js:13
+#: src/admin/pages/Members.js:272
+msgid "Trash"
+msgstr ""
+
+#: build/admin.js:13
+#: src/admin/pages/Members.js:282
+msgid "Search members"
+msgstr ""
+
+#: build/admin.js:13
+#: build/admin.js:27
+#: src/admin/pages/Members.js:291
+#: src/admin/pages/Members.js:592
+msgid "Empty Trash"
+msgstr ""
+
+#. translators: %d: number of selected members.
+#: build/admin.js:14
+#: src/admin/pages/Members.js:301
+#, js-format
+msgid "%d selected"
+msgid_plural "%d selected"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:14
+#: src/admin/pages/Members.js:312
+msgid "Restore selected"
+msgstr ""
+
+#: build/admin.js:14
+#: build/admin.js:26
+#: src/admin/pages/Members.js:319
+#: src/admin/pages/Members.js:579
+msgid "Delete permanently"
+msgstr ""
+
+#: build/admin.js:14
+#: src/admin/pages/Members.js:328
+msgid "Delete selected"
+msgstr ""
+
+#: build/admin.js:14
+#: src/admin/pages/Members.js:332
+msgid "Clear selection"
+msgstr ""
+
+#: build/admin.js:14
+#: src/admin/pages/Members.js:346
+msgid "Select all members on this page"
+msgstr ""
+
+#: build/admin.js:14
+#: src/admin/pages/Members.js:352
+msgid "Name"
+msgstr ""
+
+#: build/admin.js:14
+#: build/admin.js:29
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:503
+#: src/admin/pages/MemberForm.js:239
+#: src/admin/pages/Members.js:356
+msgid "Job Title"
+msgstr ""
+
+#: build/admin.js:14
+#: build/admin.js:29
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:537
+#: src/admin/pages/MemberForm.js:285
+#: src/admin/pages/Members.js:357
+msgid "Reports To"
+msgstr ""
+
+#: build/admin.js:14
+#: src/admin/pages/Members.js:358
+msgid "Direct Reports"
+msgstr ""
+
+#: build/admin.js:14
+#: src/admin/pages/Members.js:361
+msgid "Order"
+msgstr ""
+
+#: build/admin.js:14
+#: src/admin/pages/Members.js:383
+msgid "Trash is empty."
+msgstr ""
+
+#: build/admin.js:14
+#: src/admin/pages/Members.js:384
+msgid "No members found."
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:15
+#: src/admin/pages/Members.js:398
+#, js-format
+msgid "Select %s"
+msgstr ""
+
+#: build/admin.js:15
+#: src/admin/pages/Members.js:421
+msgid "Top level"
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:16
+#: src/admin/pages/Members.js:438
+#, js-format
+msgid "Restore %s"
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:17
+#: src/admin/pages/Members.js:450
+#, js-format
+msgid "Permanently delete %s"
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:18
+#: build/admin.js:32
+#: src/admin/pages/Builder.js:364
+#: src/admin/pages/Members.js:465
+#, js-format
+msgid "Edit %s"
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:19
+#: build/admin.js:33
+#: src/admin/pages/Builder.js:376
+#: src/admin/pages/Members.js:476
+#, js-format
+msgctxt "team member"
+msgid "Delete %s"
+msgstr ""
+
+#: build/admin.js:19
+#: src/admin/pages/Members.js:498
+msgid "‹ Prev"
+msgstr ""
+
+#. translators: 1: current page, 2: total pages, 3: total members.
+#: build/admin.js:20
+#: src/admin/pages/Members.js:503
+#, js-format
+msgid "Page %1$d of %2$d (%3$d members)"
+msgstr ""
+
+#: build/admin.js:20
+#: src/admin/pages/Members.js:514
+msgid "Next ›"
+msgstr ""
+
+#: build/admin.js:20
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:617
+#: src/admin/pages/Members.js:525
+msgid "Delete member?"
+msgstr ""
+
+#. translators: %d: number of members.
+#: build/admin.js:21
+#: src/admin/pages/Members.js:528
+#, js-format
+msgid "Delete %d members?"
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:22
+#: src/admin/pages/Members.js:536
+#, js-format
+msgid "“%s” will be moved to the trash. You can restore it from the Trash tab."
+msgstr ""
+
+#: build/admin.js:22
+#: src/admin/pages/Members.js:540
+msgid "Their direct reports will move up one level."
+msgstr ""
+
+#. translators: %d: number of members.
+#: build/admin.js:23
+#: src/admin/pages/Members.js:544
+#, js-format
+msgid "%d members will be moved to the trash. Any direct reports they have will move up one level. You can restore them from the Trash tab."
+msgstr ""
+
+#. translators: %d: number of members moved to trash.
+#: build/admin.js:24
+#: src/admin/pages/Members.js:147
+#, js-format
+msgid "%d member moved to the trash."
+msgid_plural "%d members moved to the trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:24
+#: src/admin/pages/Members.js:560
+msgid "Permanently delete member?"
+msgstr ""
+
+#. translators: %d: number of members.
+#: build/admin.js:25
+#: src/admin/pages/Members.js:563
+#, js-format
+msgid "Permanently delete %d members?"
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:26
+#: src/admin/pages/Members.js:571
+#, js-format
+msgid "“%s” will be permanently deleted. This cannot be undone."
+msgstr ""
+
+#: build/admin.js:26
+#: src/admin/pages/Members.js:574
+msgid "These members will be permanently deleted. This cannot be undone."
+msgstr ""
+
+#. translators: %d: number of members permanently deleted.
+#: build/admin.js:27
+#: build/admin.js:28
+#: src/admin/pages/Members.js:187
+#: src/admin/pages/Members.js:209
+#, js-format
+msgid "%d member permanently deleted."
+msgid_plural "%d members permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:27
+#: src/admin/pages/Members.js:587
+msgid "Empty the trash?"
+msgstr ""
+
+#: build/admin.js:27
+#: src/admin/pages/Members.js:588
+msgid "Every member in the trash will be permanently deleted. This cannot be undone."
+msgstr ""
+
+#: build/admin.js:28
+#: src/admin/pages/MemberForm.js:130
+msgid "Member created."
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:29
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:468
+#: src/admin/pages/MemberForm.js:221
+#, js-format
+msgid "Edit: %s"
+msgstr ""
+
+#: build/admin.js:29
+#: src/admin/pages/MemberForm.js:227
+msgid "All Members"
+msgstr ""
+
+#: build/admin.js:29
+#: src/admin/pages/MemberForm.js:195
+msgid "Saved."
+msgstr ""
+
+#: build/admin.js:29
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:494
+#: src/admin/pages/MemberForm.js:234
+msgid "Name *"
+msgstr ""
+
+#: build/admin.js:29
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:512
+#: src/admin/pages/MemberForm.js:245
+msgid "Email"
+msgstr ""
+
+#: build/admin.js:29
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:520
+#: src/admin/pages/MemberForm.js:249
+msgid "Phone"
+msgstr ""
+
+#: build/admin.js:29
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:529
+#: src/admin/pages/MemberForm.js:255
+msgid "Profile Link"
+msgstr ""
+
+#: build/admin.js:29
+#: src/admin/pages/MemberForm.js:265
+msgid "Bio"
+msgstr ""
+
+#: build/admin.js:29
+#: src/admin/pages/MemberForm.js:268
+msgid "A short biography…"
+msgstr ""
+
+#: build/admin.js:29
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:553
+#: src/admin/pages/Builder.js:580
+#: src/admin/pages/MemberForm.js:300
+#: src/admin/pages/MemberForm.js:327
+msgid "Inherit from manager"
+msgstr ""
+
+#: build/admin.js:29
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:578
+#: src/admin/pages/MemberForm.js:325
+msgid "Color Guide"
+msgstr ""
+
+#: build/admin.js:29
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:589
+#: src/admin/pages/MemberForm.js:337
+msgid "Photo"
+msgstr ""
+
+#: build/admin.js:29
+#: build/admin.js:34
+#: build/admin.js:36
+#: build/admin.js:43
+#: src/admin/pages/Builder.js:607
+#: src/admin/pages/MemberForm.js:355
+#: src/admin/pages/Settings.js:378
+#: src/admin/pages/Theme.js:180
+msgid "Saving…"
+msgstr ""
+
+#: build/admin.js:29
+#: build/admin.js:36
+#: src/admin/pages/MemberForm.js:357
+#: src/admin/pages/Theme.js:182
+msgid "Save Changes"
+msgstr ""
+
+#: build/admin.js:29
+#: build/admin.js:40
+#: src/admin/pages/MemberForm.js:364
+#: src/admin/pages/Theme.js:336
+msgid "Live Preview"
+msgstr ""
+
+#: build/admin.js:29
+#: src/admin/pages/MemberForm.js:375
+msgid "Department pills and colors shown here appear on the chart wherever this member’s branch diverges from their manager’s."
+msgstr ""
+
+#: build/admin.js:29
+#: src/admin/pages/Builder.js:181
+msgid "Chart updated."
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:30
+#: src/admin/pages/Builder.js:324
+#, js-format
+msgid "Expand %s"
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:31
+#: src/admin/pages/Builder.js:326
+#, js-format
+msgid "Collapse %s"
+msgstr ""
+
+#: build/admin.js:31
+#: src/admin/pages/Builder.js:357
+msgid "+ Add Direct Report"
+msgstr ""
+
+#: build/admin.js:33
+#: src/admin/pages/Builder.js:422
+msgid "Search the tree…"
+msgstr ""
+
+#: build/admin.js:33
+#: src/admin/pages/Builder.js:425
+msgid "Search the tree"
+msgstr ""
+
+#: build/admin.js:33
+#: src/admin/pages/Builder.js:429
+msgid "Drag onto a member to change their manager; drag above or below to reorder siblings."
+msgstr ""
+
+#: build/admin.js:33
+#: src/admin/pages/Builder.js:445
+msgid "Sample organization loaded."
+msgstr ""
+
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:476
+msgid "Close"
+msgstr ""
+
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:241
+msgid "Member added."
+msgstr ""
+
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:241
+msgid "Member saved."
+msgstr ""
+
+#: build/admin.js:34
+#: src/admin/pages/Builder.js:607
+msgid "Save"
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:35
+#: src/admin/pages/Builder.js:622
+#, js-format
+msgid "“%s” will be moved to the trash. Their direct reports will move up one level."
+msgstr ""
+
+#. translators: %s: member name.
+#: build/admin.js:36
+#: src/admin/pages/Builder.js:630
+#, js-format
+msgid "“%s” will be moved to the trash."
+msgstr ""
+
+#: build/admin.js:36
+#: src/admin/pages/Builder.js:256
+msgid "Member moved to the trash."
+msgstr ""
+
+#: build/admin.js:36
+#: src/admin/pages/Organization.js:162
+msgid "Departments and locations are assigned to members on their profile. A department is inherited by a member’s reports until one of them sets their own; locations are individual."
+msgstr ""
+
+#: build/admin.js:36
+#: src/admin/pages/Organization.js:172
+msgid "New department…"
+msgstr ""
+
+#: build/admin.js:36
+#: src/admin/pages/Organization.js:181
+msgid "New location…"
+msgstr ""
+
+#: build/admin.js:36
+#: src/admin/pages/Theme.js:152
+msgid "Color guides saved."
+msgstr ""
+
+#: build/admin.js:36
+#: src/admin/pages/Theme.js:183
+msgid "Saved"
+msgstr ""
+
+#: build/admin.js:36
+#: src/admin/pages/Theme.js:190
+msgid "Color Guides"
+msgstr ""
+
+#. translators: %s: color guide name.
+#: build/admin.js:37
+#: src/admin/pages/Theme.js:210
+#, js-format
+msgid "Delete color guide “%s”"
+msgstr ""
+
+#: build/admin.js:37
+#: src/admin/pages/Theme.js:27
+msgid "New Group"
+msgstr ""
+
+#: build/admin.js:37
+#: src/admin/pages/Theme.js:221
+msgid "+ New Group"
+msgstr ""
+
+#: build/admin.js:37
+#: src/admin/pages/Theme.js:228
+msgid "Group Name"
+msgstr ""
+
+#. translators: %d: level number.
+#: build/admin.js:38
+#: build/admin.js:41
+#: src/admin/pages/Theme.js:243
+#: src/admin/pages/Theme.js:342
+#, js-format
+msgid "Level %d"
+msgstr ""
+
+#: build/admin.js:38
+#: src/admin/pages/Theme.js:247
+msgid "(deeper levels reuse this style)"
+msgstr ""
+
+#: build/admin.js:38
+#: src/admin/pages/Theme.js:252
+msgid "Card"
+msgstr ""
+
+#: build/admin.js:38
+#: src/admin/pages/Theme.js:257
+msgid "Gradient end"
+msgstr ""
+
+#: build/admin.js:38
+#: src/admin/pages/Theme.js:263
+msgid "Text"
+msgstr ""
+
+#: build/admin.js:38
+#: src/admin/pages/Theme.js:268
+msgid "Pill"
+msgstr ""
+
+#. translators: %d: level number.
+#: build/admin.js:39
+#: src/admin/pages/Theme.js:283
+#, js-format
+msgid "Remove level %d"
+msgstr ""
+
+#. translators: 1: current level count, 2: maximum levels.
+#: build/admin.js:40
+#: src/admin/pages/Theme.js:321
+#, js-format
+msgid "+ Add Level (%1$d/%2$d)"
+msgstr ""
+
+#: build/admin.js:40
+#: src/admin/pages/Theme.js:330
+msgid "Create a color guide to get started."
+msgstr ""
+
+#: build/admin.js:41
+#: src/admin/pages/Theme.js:347
+msgid "Group starts here"
+msgstr ""
+
+#. translators: %d: nesting depth.
+#: build/admin.js:42
+#: src/admin/pages/Theme.js:350
+#, js-format
+msgid "Depth %d"
+msgstr ""
+
+#: build/admin.js:42
+#: src/admin/pages/Theme.js:364
+msgid "Delete color guide?"
+msgstr ""
+
+#. translators: %s: color guide name.
+#: build/admin.js:43
+#: src/admin/pages/Theme.js:367
+#, js-format
+msgid "Members assigned to “%s” will fall back to inherited styling. This is applied when you save."
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:253
+msgid "Settings saved."
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:363
+msgid "Delete all TeamGraph data when the plugin is uninstalled"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:368
+msgid "Members, departments, locations, and color guides are removed permanently when the plugin is deleted from the Plugins screen. Leave off to keep data through a reinstall."
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:378
+msgid "Save Settings"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:387
+msgid "Sample data"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:391
+msgid "The sample organization is loaded. Removing it deletes only the seeded members, departments, locations, and color guide — your own content is untouched."
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:403
+msgid "Removing…"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:404
+msgid "Remove sample data"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:410
+msgid "Load a small sample organization — members, departments, locations, and a color guide — to explore TeamGraph. You can remove it again from here with one click."
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:267
+msgid "Sample organization loaded. Take a look at the Chart Builder to see it."
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:421
+msgid "Loading…"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:421
+msgid "Load sample data"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:430
+msgid "Export Members"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:432
+msgid "Download every member as a CSV file — including job title, contact details, department, location, and manager. The file re-imports cleanly, so it doubles as a backup."
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:301
+msgid "Members exported."
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:443
+msgid "Exporting…"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:443
+msgid "Download CSV"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:448
+msgid "Import Members"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:450
+msgid "Import members from a CSV file. Rows matching an existing member’s name update that member; new names are created. Unknown departments and locations are created automatically. See the CSV Guide tab for the format."
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:457
+msgid "Change File"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:457
+msgid "Choose File"
+msgstr ""
+
+#: build/admin.js:43
+#: src/admin/pages/Settings.js:461
+msgid "CSV file to import"
+msgstr ""
+
+#. translators: 1: created count, 2: updated count, 3: skipped count.
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:322
+#, js-format
+msgid "Import finished: %1$d created, %2$d updated, %3$d skipped."
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:479
+msgid "Importing…"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:479
+msgid "Import"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:485
+msgid "Warnings"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:498
+msgid "CSV format"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:500
+msgid "The first row must be a header naming the columns. Only"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:502
+msgid "is required — every other column is optional, and extra columns are ignored. Here’s what a file looks like:"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:511
+msgid "Example CSV contents"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:541
+msgid "Download template CSV"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:544
+msgid "Columns"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:548
+msgid "Column"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:549
+msgid "Required"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:559
+msgid "Yes"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:559
+msgid "No"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:574
+msgid "Remove sample data?"
+msgstr ""
+
+#: build/admin.js:44
+#: src/admin/pages/Settings.js:575
+msgid "All seeded sample members, departments, locations, and the sample color guide will be permanently deleted."
+msgstr ""
+
+#. translators: %d: number of members removed.
+#: build/admin.js:45
+#: src/admin/pages/Settings.js:285
+#, js-format
+msgid "Sample data removed (%d members)."
+msgstr ""
+
+#: build/block.js:1
 #: src/block/index.js:94
 msgid "Org chart"
 msgstr ""
 
+#: build/block.js:1
 #: src/block/index.js:95
 msgid "Card grid"
 msgstr ""
 
+#: build/block.js:1
 #: src/block/index.js:96
 msgid "Directory list"
 msgstr ""
 
+#: build/block.js:1
+#: src/block/index.js:102
+msgid "Chart settings"
+msgstr ""
+
+#: build/block.js:1
+#: src/block/index.js:104
+msgid "View"
+msgstr ""
+
+#: build/block.js:1
+#: src/block/index.js:110
+msgid "Start from"
+msgstr ""
+
+#: build/block.js:1
+#: src/block/index.js:113
+msgid "Whole organization"
+msgstr ""
+
+#: build/block.js:1
+#: src/block/index.js:120
+msgid "Chart a single branch by picking its top member."
+msgstr ""
+
+#: build/block.js:1
+#: src/block/index.js:125
+msgid "All departments"
+msgstr ""
+
+#: build/block.js:1
+#: src/block/index.js:131
+msgid "All locations"
+msgstr ""
+
+#: build/block.js:1
+#: src/block/index.js:135
+msgid "Visitor tools"
+msgstr ""
+
+#: build/block.js:1
+#: src/block/index.js:137
+msgid "Show toolbar"
+msgstr ""
+
+#: build/block.js:1
+#: src/block/index.js:140
+msgid "Adds zoom, expand all, and fullscreen controls above the chart. Dragging to pan the org chart is always available."
+msgstr ""
+
+#: build/block.js:1
+#: src/block/index.js:143
+msgid "Let visitors switch views"
+msgstr ""
+
+#: build/block.js:1
+#: src/block/index.js:147
+msgid "Adds Tree / Grid / List buttons to the toolbar. Visitors can override the view chosen above."
+msgstr ""
+
+#: block/block.json
+msgctxt "block title"
+msgid "TeamGraph Chart"
+msgstr ""
+
+#: block/block.json
+msgctxt "block description"
+msgid "Display your organization chart, team grid, or directory list."
+msgstr ""
+
+#: block/block.json
+msgctxt "block keyword"
+msgid "org chart"
+msgstr ""
+
+#: block/block.json
+msgctxt "block keyword"
+msgid "team"
+msgstr ""
+
+#: block/block.json
+msgctxt "block keyword"
+msgid "directory"
+msgstr ""
+
+#: block/block.json
+msgctxt "block keyword"
+msgid "organization"
+msgstr ""

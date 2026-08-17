@@ -8,7 +8,7 @@
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, _x, sprintf } from '@wordpress/i18n';
 import { api } from '../api';
 import {
 	CardPreview,
@@ -373,7 +373,7 @@ export default function Builder() {
 							className="teamgraph-icon-button teamgraph-icon-danger"
 							aria-label={ sprintf(
 								/* translators: %s: member name. */
-								__( 'Delete %s', 'teamgraph' ),
+								_x( 'Delete %s', 'team member', 'teamgraph' ),
 								node.name
 							) }
 							onClick={ () => setDeleting( node ) }

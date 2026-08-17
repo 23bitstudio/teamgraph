@@ -2,3 +2,8 @@ node_modules/
 .DS_Store
 .claude
 dist
+
+# Release artifacts from `npm run plugin-zip` (tools/make-zip.sh). A committed
+# archive trips Plugin Check's compressed_files rule.
+.dist-tmp/
+teamgraph.zip
